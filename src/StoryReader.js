@@ -203,7 +203,7 @@ const handlePlay = async () => {
 
  
 
-  const audio = new Audio('/story.mp3');
+  const audio = new Audio(process.env.PUBLIC_URL + '/story.mp3');
 
   // Begin playback of full story audio
   const audioPromise = new Promise((resolve, reject) => {
@@ -396,7 +396,7 @@ const handlePlay = async () => {
     </div>
     <div className="story-illustration-container">
         <img className="story-illustration"
-        src="/horizontal_illustration.png"
+        src={process.env.PUBLIC_URL + '/horizontal_illustration.png'}
         alt="Leo and family barbecue"
       />
     </div>

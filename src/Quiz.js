@@ -54,7 +54,7 @@ const Quiz = ({ goBack }) => {
   const [showPopup, setShowPopup] = useState(false);
 
   const playSound = (file) => {
-    const audio = new Audio(file);
+    const audio = new Audio(process.env.PUBLIC_URL + file);
     audio.play();
   };
 
