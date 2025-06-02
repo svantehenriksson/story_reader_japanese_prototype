@@ -1,0 +1,195 @@
+/* General container */
+.story-container {
+    background-color: #1a1a2e;
+    color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  /* Title */
+  .story-title {
+    color: #00d4ff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+  }
+  
+  /* Story lines */
+  .story-line {
+    margin-bottom: 0.5em;
+    line-height: 1.6;
+  }
+  
+  .finnish {
+    font-size: 3em;
+    color: #00d4ff;
+  }
+  
+  .english {
+    font-size: 1.5em;
+    color: #00d4ff;
+  }
+  
+  .spoken {
+    font-size: 1.5em;
+    color: #00d4ff;
+    font-style: italic;
+  }
+  
+  /* Word styling */
+  .story-word {
+    margin: 0 6px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* Button */
+  .next-button {
+    margin-top: 40px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    background-color: #00d4ff;
+    color: #1a1a2e;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .next-button:hover {
+    background-color: #008cbf;
+  }
+  .back-button {
+    margin-top: 40px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    background-color: #00d4ff;
+    color: #1a1a2e;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #008cbf;
+  }
+  /* Highlighted Finnish word */
+  .highlight {
+    background-color: #00d4ff;
+    color: #1a1a2e;
+    border-radius: 5px;
+    box-shadow: 0 0 0 4px #00d4ff inset;
+    transition: all 0.2s ease;
+  }
+
+  /* Outer rounded box */
+.outer-box {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+    max-width: 800px;
+    margin: 0 auto 2em;
+  }
+  
+  /* Inner box for Finnish only */
+  .finnish-box {
+    background-color: rgba(0, 212, 255, 0.07);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+
+
+  .grammar-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 1.3em;
+    border-radius: 50%;
+    background-color: #ffd700;
+    color: #1a1a2e;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    vertical-align: middle;
+  }
+  
+  .grammar-button:hover {
+    background-color: #ffcc00;
+  }
+
+  .grammar-button {
+    margin-top: 40px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    background-color: #00d4ff;
+    color: #1a1a2e;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .grammar-button:hover {
+    background-color: #008cbf;
+  }
+  
+  .grammar-popup {
+    background-color: #fff9c4;
+    color: #1a1a2e;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.05em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .story-illustration {
+    margin-top: 20px;
+    max-width: 50%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+
+  .play-button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    background-color: #00fa9a;
+    color: #1a1a2e;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .play-button:hover {
+    background-color: #00c97b;
+  }
+  
+
+  .stop-button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    background-color: #ff5c5c;
+    color: #1a1a2e;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .stop-button:hover {
+    background-color: #ff1c1c;
+  }
+  
