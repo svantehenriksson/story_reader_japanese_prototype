@@ -10,12 +10,16 @@ import {
     storyTitle,
     startTimes
 } from './StoryData';
-import { FinnishTranslationIndex, EnglishTranslationIndex, FinnishEndingsIndex } from './StoryData';
+import { FinnishTranslationIndex, EnglishTranslationIndex, FinnishEndingsIndex, grammarNotes } from './StoryData';
+import { topics } from './topics';
 
-import { grammarNotes } from './Grammar';
 
 const StoryReader = ({ goToQuiz, topic, topics, handleTopicSelect, topicIndex: currentTopicIndex }) => {
-  const { storyTitle, finnishLines, englishLines, spokenLines, FinnishTranslationIndex, EnglishTranslationIndex, FinnishEndingsIndex } = topic.storyData;
+  const { storyTitle, finnishLines, englishLines, spokenLines, FinnishTranslationIndex, EnglishTranslationIndex, FinnishEndingsIndex, grammarNotes } = topic.storyData;
+
+  console.log('grammarNotes: ', grammarNotes);  
+  console.log('topic.storyData: ', topic.storyData);
+  console.log('storyTitle: ', storyTitle);
 
   const [lineIndex, setLineIndex] = useState(0);
   const [hoveredWordIndex, setHoveredWordIndex] = useState(null);

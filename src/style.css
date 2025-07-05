@@ -202,47 +202,51 @@
   }
 
   .change-chapter-button {
-    background-color: #f8f9fa;
-    color: #202124;
-    padding: 1rem 1.5rem;
-    border: 1px solid #dadce0;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: bold;
+    background-color: #00d4ff;
+    color: #1a1a2e;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     margin-top: 1rem;
   }
 
   .change-chapter-button:hover {
-    background-color: #f1f3f4;
-    border-color: #d2d5d9;
-    box-shadow: 0 1px 3px 0 rgba(60,64,67,0.302), 0 4px 8px 3px rgba(60,64,67,0.149);
+    background-color: #008cbf;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   }
 
   /* Topic Dropdown Styles */
   .topic-dropdown {
     position: absolute;
-    bottom: 100%;
-    left: 0;
-    right: 0;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #fff;
     border: 1px solid #dadce0;
-    border-radius: 8px;
-    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     z-index: 1000;
-    margin-bottom: 10px;
-    overflow: hidden; /* Ensures the border-radius is respected by children */
-    min-width: 300px;
+    margin-top: 8px;
+    overflow: hidden;
+    width: fit-content;
+    min-width: 200px;
   }
 
   .topic-option {
-    padding: 16px 24px;
+    padding: 12px 20px;
     cursor: pointer;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e8eaed;
     font-size: 1rem;
-    transition: background-color 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    color: #202124;
+    font-weight: 500;
+    background-color: #fff;
+    white-space: nowrap;
   }
 
   .topic-option:last-child {
@@ -250,12 +254,13 @@
   }
 
   .topic-option:hover {
-    background-color: #f1f3f4;
+    background-color: #f8f9fa;
+    color: #202124;
   }
 
   .topic-option.active {
-    background-color: #e8f0fe;
+    background-color: #00d4ff;
     font-weight: bold;
-    color: #1967d2;
+    color: #1a1a2e;
   }
   

@@ -25,6 +25,41 @@ const splitByBr = (storyText) => {
     return lines;
   };
   
+
+// Using a function written by ChatGPT to extract the endings index:
+
+
+  function extractFinnishEndingsIndex(storyText) {
+    const lines = storyText.trim().split('<br>').map(line => line.trim());
+    const endingsIndex = [];
+  
+    for (const line of lines) {
+      const words = line.split(/\s+/);
+      const splitWords = [];
+      const endingIndices = [];
+  
+      let currentIndex = 0;
+  
+      for (const word of words) {
+        const parts = word.split('-');
+        parts.forEach((part, partIndex) => {
+          splitWords.push(part);
+          if (partIndex > 0) {
+            endingIndices.push(currentIndex);
+          }
+          currentIndex++;
+        });
+      }
+  
+      endingsIndex.push(endingIndices);
+    }
+  
+    return endingsIndex;
+  }
+  
+
+
+
   const story1Finnish = `
   Luca on lentokentä-llä. <br> 
   Luca on väsynyt. <br> 
@@ -104,9 +139,9 @@ const splitByBr = (storyText) => {
   Luca hymyil-ee myös. <br> 
   Luca kysy-y: "Mikä sinun nime-si on?" <br> 
   Nainen sano-o: "Aino." <br> 
-  Luca sano-o: "Minun nimi on Luca." <br> 
-  Luca sano-o: "Asun toise-ssa kerrokse-ssa." <br> 
-  Aino sano-o: "Asun yläkerra-ssa-si." <br> 
+  Luca: "Minun nimi on Luca." <br> 
+  Luca: "Asun toise-ssa kerrokse-ssa." <br> 
+  Aino: "Asun yläkerra-ssa-si." <br> 
   Hissi pysähty-y. <br> 
   Ding! <br> 
   Luca astu-u ulos.`;
@@ -124,9 +159,9 @@ const splitByBr = (storyText) => {
   Luca smiles as well. <br> 
   Luca asks: "What's your name?" <br> 
   The woman says: "Aino." <br> 
-  Luca says: "My name is Luca." <br> 
-  Luca says: "I live on the second floor." <br> 
-  Aino says: "I live upstairs from you." <br> 
+  Luca: "My name is Luca." <br> 
+  Luca: "I live on the second floor." <br> 
+  Aino: "I live upstairs from you." <br> 
   The elevator stops. <br> 
   Ding! <br> 
   Luca steps out.`;
@@ -171,6 +206,91 @@ const splitByBr = (storyText) => {
         EnglishTranslationIndex: [
           [0, 1, [3, 4], 2], [0, 1, 2], [0, 1, 2], [[0, 1], 2, 3], [[0, 1], 2, [3, 4], 5], [0, [1, 2], 3], [0, 1, 2, 3, 4], [0, [1, 2], [3, 4]], [[0, 1], 2], [[0, 1], 2, [3, 4]], [0, 1, 2, 3], [0, 1, 2], [0, 1, 2, 3], [[0, 1], [2, 3]], [[0, 1], 2], [0, 1], [0, 1], [[0, 1], [2, 3]], [0, [1, 2]], [0, 1, 2]
         ],
+        grammarNotes: [
+          ['GENERAL NOTE:',
+            'These grammar notes provide some explanations.',
+            'We have tried to make them as short and clear as possible.',
+            <br/>,
+            'Often it is also better to just read and listen to the story.',
+            'Grammar is often learnt best in context.',
+            <br/>,
+            'lentokentällä = lentokenttä (airport) + -llä (on).',
+            'So in Finnish you are "on" the airport.',
+          <br/>,
+          '"on" = "is" is a form of "olla" = "to be".'],
+          ['Second page'],
+          [
+            'kahvia = kahvi + -a is a form we encounter very often.', 
+            <br/>,
+            'Here it means Luca drinks some coffee. (as in it is not specified how much)',
+            'If he would drink exactly one coffee, it would be "Luca juo kahvin".',
+            <br/>,
+            'You can search for "partitive Finnish" or "partitiivi" for a traditional grammar explanation.',
+            'But it is probably better to just slowly get used to it.',
+            'We will have plenty of examples.',
+            <br/>,
+            'Notice how kahvi resembles the English word coffee a little bit.'
+          ],
+          ['kallista = kallis + -ta',
+            'is again the same "partitive" form as kahvia = kahvi + -a',
+            <br/>,
+            'Depending on the word, the ending can be different:',
+            '-a, -ä, -ta, -tä, -tta or -ttä.'
+          ],
+          ['Again outoa = outo (strange/weird) + -a',
+            'Same "partitive" form as kahvia and kallista.'],
+          [
+            'There is no "the" word in Finnish.',
+            'So kahvi can be either "the coffee" or "coffee".',
+            <br/>,
+            'To native Finnish speakers, it is often clear from context whether we mean a specific "the" coffee or coffee in general.',
+            <br/>,
+            'In this particular example, it could actually be either.',
+            'So "But coffee helps" would also be a correct translation if one understands kahvi to mean coffee in general here.'
+          ],
+          ['Suomalaiset = suomalainen (Finn, or Finnish person) + -set (ending meaning many) = Finns.',
+            <br/>,
+            'juovat = juo + -vat (ending meaning many) = drink',
+            <br/>,
+            'Earlier we had Luca juo... Now Suomalaiset juovat...',
+            'The basic form of juo is juoda (to drink).',
+            <br/>,
+            'For different people, it would be: ',
+            'Minä juon (I drink)',
+            'Sinä juot (you drink)',
+            'Hän juo (he/she/it drinks)',
+            'Me juomme (we drink)',
+            'Te juotte (you all drink)',
+            'He juovat (they drink)'
+          ],
+          ['Bussia = bussi + -a is again "partitive".',
+            'Here the standard grammar explanation that "partitive" is used for parts of something breaks down.',
+            'It shows why grammar is often best learnt in context, slowly, as you get used to it.',
+            <br/>,
+            'Etsii = etsiä (to look for / search) + -i (ending meaning he/she looks).',
+            'Notice how the last ä-letter drops off when saying he looks for.',
+            <br/>,
+            'The verb etsiä changes similarly but a bit differently from juoda on the previous page:',
+            'Minä etsin (I look for)',
+            'Sinä etsit (you look for)',
+            'Hän etsii (he/she/it looks for)',
+            'Me etsimme (we look for)',
+            'Te etsitte (you all look for)',
+            'He etsivät (they look for)'
+          ],
+          ['Tulee = tulla (arrive/come) + -ee (ending meaning he/she/it arrives/comes).'],
+          ['Englantia = englanti (English) + -a.',
+            'Once again the "partitive" form.',
+            'As you can see, this form is very common in Finnish.'
+          ],
+          ['The negative sentence has the same word order in Finnish and English:',
+            'Kuljettaja (the driver) ei (does not) puhu (speak/say) mitään (anything).'
+          ],
+          ['Other greetings are:',
+           'Moi (roughly "Hi", more informal)',
+           'Hyvää päivää / Päivää (Good day, formal)',
+           'Terve (a bit less formal)'
+        ]
       },
       quizData: [
         { question: 'Missä Luca on?', options: ['Kotona', 'Lentokentällä', 'Bussissa', 'Hississä'], answer: 'Lentokentällä' },
@@ -186,14 +306,22 @@ const splitByBr = (storyText) => {
         finnishLines: splitByBr(story2Finnish),
         englishLines: splitByBr(story2English),
         spokenLines: splitByBr(story2SpokenFinnish),
-        FinnishEndingsIndex: [
-            [2], [2], [2], [2], [2], [2], [2], [2], [2], [2], [2], [2], [2], [2], [2], [2], [], [2]
-        ],
+       /* FinnishEndingsIndex: [
+            [3], [1], [2], [2], [2,4], [2,4], [2,4], [2], [2], [2], [2], [2], [2], [2], [2], [2], [], [2]
+        ],*/
+        FinnishEndingsIndex: extractFinnishEndingsIndex(story2Finnish),
         FinnishTranslationIndex: [
             [0, 1, [2, 3]], [[0, 1], 2, 3], [0, [1, 2], 3], [0, [1, 2], 3, 4], [0, [1, 2], [3, 4]], [0, [1, 2], [3, 4]], [0, [1, 2], 3], [0, [1, 2], 3], [0, [1, 2]], [0, [1, 2], 3], [0, [1, 2], 3, [4, 5], [6, 7], 8, 9], [0, [1, 2], 3], [0, [1, 2], 3, [4, 5], 6, 7], [0, [1, 2], 3, [4, 5], [6, 7], [8, 9]], [0, [1, 2], 3, [4, 5], [6, 7], [8, 9]], [0, [1, 2]], [0], [0, [1, 2], 3]
         ],
         EnglishTranslationIndex: [
             [0, 1, [2, 3], [4, 5]], [0, 1, 2, 3, [4, 5], [6, 7]], [[0, 1], 2, 3], [0, 1, 2, 3], [0, 1, [2, 3], [4, 5]], [[0, 1], 2, [3, 4], 5], [0, 1, 2], [[0, 1], 2, 3], [[0, 1], 2], [0, 1, [2, 3]], [0, 1, 2, [3, 4, 5], [6, 7]], [[0, 1], 2, 3], [0, 1, 2, [3, 4], 5, 6], [0, 1, 2, 3, [4, 5], [6, 7], 8], [0, 1, 2, 3, 4, [5, 6], 7], [[0, 1], 2], [0], [0, 1, 2]
+        ],
+        grammarNotes: [
+          ['First page'],
+          ['Second page'],
+          ['Third page'],
+          ['Fourth page'],
+          ['Fifth page'],
         ]
       },
       quizData: [
