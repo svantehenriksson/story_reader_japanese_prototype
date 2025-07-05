@@ -1,29 +1,6 @@
 import React, { useState } from 'react';
 import './Quiz.css';
 
-const quizData = [
-  {
-    question: 'Miten sanotaan "I am hungry" suomeksi?',
-    options: ['Minulla on nälkä', 'Olen nälkä', 'Minä syön nälkä', 'Minulla on syönyt'],
-    answer: 'Minulla on nälkä'
-  },
-  {
-    question: 'Mitä orava teki kastanjalle?',
-    options: ['Antoi sen Leolle', 'Piilotti sen puuhun', 'Varasti sen', 'Söi sen isän kanssa'],
-    answer: 'Varasti sen'
-  },
-  {
-    question: 'Miksi isä ei syönyt soijamakkaraa?',
-    options: ['Hän ei pidä siitä', 'Se oli loppu', 'Hän on allerginen soijalle', 'Hän on vegaani'],
-    answer: 'Hän on allerginen soijalle'
-  },
-  {
-    question: 'Mitä tapahtui tarinan lopussa?',
-    options: ['Leo sai uuden kastanjan', 'Perhe meni nukkumaan', 'Orava pieraisi', 'Isä grillasi lisää ruokaa'],
-    answer: 'Orava pieraisi'
-  }
-];
-
 const congratsMessages = [
     "🐷 Sika hyvä!",
     "Mahtavaa!",
@@ -46,7 +23,7 @@ const congratsMessages = [
     "🦉 Viisaasti valittu!",
     "🌟 Tähtihetki!"]
 
-const Quiz = ({ goBack }) => {
+const Quiz = ({ goBack, quizData }) => {
   const [current, setCurrent] = useState(0);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
@@ -66,6 +43,7 @@ const Quiz = ({ goBack }) => {
   };
 
   const handleAnswer = (option) => {
+    if (!quizData || quizData.length === 0) return;
     const isCorrect = option === quizData[current].answer;
     if (isCorrect) {
       setScore(score + 1);
@@ -83,6 +61,18 @@ const Quiz = ({ goBack }) => {
       }
     }, 1500);
   };
+
+  if (!quizData || quizData.length === 0) {
+    return (
+      <div className="quiz-container">
+        <h1 className="quiz-title">❓❓ Quiz ❓❓</h1>
+        <div className="result">
+          <p>No quiz available for this topic yet.</p>
+          <button onClick={goBack}>Takaisin tarinaan</button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="quiz-container">

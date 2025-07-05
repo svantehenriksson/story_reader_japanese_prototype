@@ -1,22 +1,113 @@
 // src/StoryData.js
 
-export const storyFinnish = [
-  "Leo: Äiti! Minulla on nälkä! <br> Äiti: Kohta syödään. <br> Leo: Mutta minulla on nälkä nyt! <br> Äiti: Etsi ruokaa metsästä. <br> Leo: Okei. <br> Viiden minuutin päästä Leo tulee takaisin. <br> Leo: Äiti! Minä löysin pähkinän. <br> Äiti: Se on kastanja, pähkinän näköinen mutta eri asia. <br> Orava juoksee Leon luo ja ottaa kastanjan. <br> Leo: Äiti! Orava varasti kastanjan. <br> Isä: Ruoka on valmista! <br> Perhe syö soijamakkaraa. <br> Isä syö lihamakkaraa. Hän on allerginen soijalle. <br> Kaikki ovat väsyneitä. <br> Orava makaa oksalla. <br> Se pieraisee niin että sen häntä heilahtaa. Loppu. ❤️"
+export const storyTitle = "Luca saapuu Suomeen"; // "Luca arrives in Finland";
+
+export const storyFinnish = `
+Luca on lentokentä-llä. <br> 
+Luca on väsynyt. <br> 
+Luca juo kahvi-a. <br> 
+Kahvi on kallis-ta. <br> 
+Kahvi on vähän outo-a. <br> 
+Mutta kahvi auttaa. <br> 
+Suomalai-set juo-vat tätä joka päivä? <br> 
+Luca ets-ii bussi-a. <br> 
+Bussi tul-ee. <br> 
+Kuljettaja ei puhu englanti-a. <br> 
+Kuljettaja ei puhu mitään. <br> 
+Luca sanoo: “Hei.” <br> 
+Kuljettaja ei sano mitään. <br> 
+Ulkona sataa lun-ta. <br> 
+Paljon lun-ta. <br> 
+On kylmä. <br> 
+Tosi kylmä. <br> 
+Lumi on kaunis-ta. <br> 
+Luca hymyil-ee. <br> 
+Tämä on Suomi.`; 
+
+export const FinnishEndingsIndex = [
+  [3],
+  [],
+  [3],
+  [3],
+  [4],
+  [],
+  [1, 3],
+  [2, 4],
+  [2],
+  [4],
+  [],
+  [],
+  [],
+  [3],
+  [2],
+  [],
+  [],
+  [3],
+  [2],
+  []
 ];
 
-export const storyFinnishWords = storyFinnish[0].split(" ");
+  //"Luca on lentokentä-llä. <br> Luca on väsynyt. <br> Luca juo kahvi-a. <br> Kahvi on kallis-ta. <br> Kahvi on vähän outo-a. <br> Mutta kahvi auttaa. <br> Suomalai-set juo-vat tätä joka päivä?"
+  //"Leo: Äiti! Minulla on nälkä! <br> Äiti: Kohta syödään. <br> Leo: Mutta minulla on nälkä nyt! <br> Äiti: Etsi ruokaa metsästä. <br> Leo: Okei. <br> Viiden minuutin päästä Leo tulee takaisin. <br> Leo: Äiti! Minä löysin pähkinän. <br> Äiti: Se on kastanja, pähkinän näköinen mutta eri asia. <br> Orava juoksee Leon luo ja ottaa kastanjan. <br> Leo: Äiti! Orava varasti kastanjan. <br> Isä: Ruoka on valmista! <br> Perhe syö soijamakkaraa. <br> Isä syö lihamakkaraa. Hän on allerginen soijalle. <br> Kaikki ovat väsyneitä. <br> Orava makaa oksalla. <br> Se pieraisee niin että sen häntä heilahtaa. Loppu. ❤️"
 
-export const storyEnglish = [
-  "Leo: Mom! I'm hungry! <br> Mom: We'll eat soon. <br> Leo: But I'm hungry now! <br> Mom: Go find food in the forest. <br> Leo: Okay. <br> Five minutes later Leo comes back. <br> Leo: Mom! I found a nut. <br> Mom: It's a chestnut, looks like a nut but is another thing. <br> A squirrel runs to Leo and takes the chestnut. <br> Leo: Mom! The squirrel stole the chestnut. <br> Dad: Food is ready! <br> The family eats soy sausage. <br> Dad eats meat sausage. He is allergic to soy. <br> Everyone is tired. <br> The squirrel lies on a branch. <br> It farts so that its tail flaps. The end. ❤️"
-];
 
-export const storyEnglishWords = storyEnglish[0].split(" ");
+//export const storyFinnishWords = storyFinnish[0].replace(/-/g, ' ').split(" ");      
+export const storyFinnishWords = storyFinnish.replace(/-/g, ' ').split(" ");             
 
-export const storySpokenFinnish = [
-  "Leo: Äiti! Mul on nälkä! <br> Äiti: Koht syödään. <br> Leo: Mut mul on nälkä nyt! <br> Äiti: Eti ruokaa metästä. <br> Leo: Okei. <br> Viis minsaa myöhemmi Leo tulee takas. <br> Leo: Äiti! Mä löysin pähkinän. <br> Äiti: Se on kastanja, pähkinän näköne mut eri juttu. <br> Orava juoksee Leon luo ja nappaa kastanjan. <br> Leo: Äiti! Orava vei kastanjan. <br> Isä: Ruoka on valmist! <br> Perhe syö soijamakkaraa. <br> Isä syö lihamakkaraa. Se on allergine soijal. <br> Kaikki on väsyneit. <br> Orava makaa oksal. <br> Se pierasee nii et sen häntä heilahtaa. Loppu. ❤️"
-];
+//storyFinnish[0].split(" ");
 
-export const storySpokenFinnishWords = storySpokenFinnish[0].split(" ");
+
+export const storyEnglish = `
+Luca is at the airport. <br> 
+Luca is tired. <br> 
+Luca drinks coffee. <br> 
+The coffee is expensive. <br> 
+The coffee is a bit strange. <br> 
+But the coffee helps. <br> 
+Finns drink this every day? <br> 
+Luca is looking for the bus. <br> 
+The bus arrives. <br> 
+The driver doesn’t speak English. <br> 
+The driver doesn’t say anything. <br> 
+Luca says: “Hi.” <br> 
+The driver doesn’t say anything. <br> 
+It’s snowing outside. <br> 
+A lot of snow. <br> 
+It’s cold. <br> 
+Really cold. <br> 
+The snow is beautiful. <br> 
+Luca smiles. <br> 
+This is Finland.
+`;
+
+export const storyEnglishWords = storyEnglish.replace(/-/g, ' ').split(" ");
+
+export const storySpokenFinnish = `
+Luca on lentokentä-l. <br> 
+Luca on väsyny. <br> 
+Luca juo kahvi-i. <br> 
+Kahvi on kallis-t. <br> 
+Kahvi on vähän outo-o. <br> 
+Mut kahvi auttaa. <br> 
+Suomalai-set juo- tätä joka päivä?" <br> 
+Luca ett-ii bussi-i. <br> 
+Bussi tul-ee. <br> 
+Kuljettaja ei puhu englanti-i. <br> 
+Kuljettaja ei puhu mitää. <br> 
+Luca sanoo: “Hei.” <br> 
+Kuljettaja ei sano mitää. <br> 
+Ulkona sataa lun-ta. <br> 
+Paljon lun-ta. <br> 
+On kylmä. <br> 
+Tosi kylmä. <br> 
+Lumi on kaunis-t. <br> 
+Luca hymyil-ee. <br> 
+Tää on Suomi.
+`;
+
+//export const storySpokenFinnishWords = storySpokenFinnish[0].split(" ");
+export const storySpokenFinnishWords = storySpokenFinnish.replace(/-/g, ' ').split(" ");             
+
 
 const splitByBr = (wordArray) => {
   const lines = [];
@@ -44,6 +135,10 @@ export const spokenLines = splitByBr(storySpokenFinnishWords);
 
 
 
+
+
+
+/*
 export const FinnishToEnglishTranslationsIndex = [
   // Line 0: "Leo: Äiti! Minulla on nälkä!" -> "Leo: Mom! I'm hungry!"
   [0, [1, 2], 3],
@@ -60,114 +155,133 @@ export const FinnishToEnglishTranslationsIndex = [
   // Line 4: "Leo: Okei." -> "Leo: Okay."
   [0, 1]
 ];
-
+*/
 
 export const FinnishTranslationIndex = [
-  // Line 0: Leo: Äiti! Minulla on nälkä!
-  [0, 1, [2, 3], 4],
-
-  // Line 1: Äiti: Kohta syödään.
-  [0, 1, 2],
-
-  // Line 2: Leo: Mutta minulla on nälkä nyt!
-  [0, 1, [2, 3], 4, 5],
-
-  // Line 3: Äiti: Etsi ruokaa metsästä.
+  // Line 0: Luca on lentokentällä.
   [0, 1, 2, 3],
 
-  // Line 4: Leo: Okei.
+  // Line 1: Luca on väsynyt.
+  [0, 1, 2],
+
+  // Line 2: Luca juo kahvia.
+  [0, 1, [2, 3]],
+
+  // Line 3: Kahvi on kallista.
+  [0, 1, [2,3]],
+
+  // Line 4: Kahvi on vähän outo-a.
+  [0, 1, 2, [3, 4]],
+  
+  // Line 5: Mutta kahvi auttaa.
+  [0, 1, 2],
+  
+  // Line 6: Suomalaiset juo-vat tätä joka päivä?
+  [[0, 1], [2, 3], 4, 5, 6],
+
+  //Line 7: Luca ets-ii bussi-a. 
+  [0, [1, 2], [3, 4]],
+
+  //Line 8: Bussi tul-ee.
+  [0, 1, 2],
+
+  //Line 9: Kuljettaja ei puhu englanti-a.
+  [0, 1, 2, [3, 4]],
+
+  //Line 10: Kuljettaja ei puhu mitään.
+  [0, 1, 2, 3],
+
+  //Line 11: Luca sanoo: "Hei."
+  [0, 1, 2],
+  
+  //Line 12: Kuljettaja ei sano mitään. 
+  [0, 1, 2, 3],
+
+  //Line 13: Ulkona sataa lunta. 
+  [0, [1, 2]],
+
+  //Line 14: Paljon lun-ta.
+  [0, [1, 2]],
+
+  //Line 15: On kylmä.
   [0, 1],
 
-  // Line 5: Viiden minuutin päästä Leo tulee takaisin.
-  [0, 1, 2, 3, 4, 5],
+  //Line 16: Tosi kylmä.
+  [0, 1],
 
-  // Line 6: Leo: Äiti! Minä löysin pähkinän.
-  [0, 1, 2, 3, 4],
+  //Line 17: Lumi on kaunis-ta.
+  [0, 1, [2, 3]],
 
-  // Line 7: Äiti: Se on kastanja, pähkinän näköinen mutta eri asia.
-  // Line 7: Mom: It's a chestnut, looks like a nut but is another thing.
+  //Line 18: Luca hymyil-ee.
+  [0, [1, 2]],
 
-  [0, [1, 2], 3, 4, 5, 6, 7],
+  //Line 19: Tämä on Suomi.
+  [0, 1, 2]
 
-  // Line 8: Orava juoksee Leon luo ja ottaa kastanjan.
-  // Line 8: A squirrel runs to Leo and takes the chestnut.
-  [0, 1, 2, 3, 4, 5, 6],
-  
-  // Line 9: Leo: Äiti! Orava varasti kastanjan.
-  // Line 9: Leo: Mom! The squirrel stole the chestnut.
-  [0, 1, 2, 3, 4],
-
-  // Line 10: Isä: Ruoka on valmista!
-  [0, 1, 2, 3],
-
-  // Line 11: Perhe syö soijamakkaraa.
-  [0, 1, 2],
-
-  // Line 12: Isä syö lihamakkaraa. Hän on allerginen soijalle.
-    // Line 12: Dad eats meat sausage. He is allergic to soy.
-
-  [0, 1, 2, 3, 4, 5, 6],
-
-  // Line 13: Kaikki ovat väsyneitä.
-  [0, 1, 2],
-
-  // Line 14: Orava makaa oksalla.
-  [0, 1, 2],
-
-  // Line 15: Se pieraisee niin että sen häntä heilahtaa.
-    // Line 15: It farts so that its tail flaps.
-
-  [0, 1, 2, 3, 4, 5, 6, 7]
 ];
 
+
+
 export const EnglishTranslationIndex = [
-  // Line 0: Leo: Mom! I'm hungry!
-  [0, 1, 2, 3],
+  // Line 0: Luca is at the airport.
+  [0, 1, [3, 4], 2],
 
-  // Line 1: Mom: We'll eat soon.
-  [0, 3, [1, 2]],
-
-  // Line 2: Leo: But I'm hungry now!
-  [0, 1, 2, 3, 4],
-
-  // Line 3: Mom: Go find food in the forest.
-  [0, [1, 2], 3, [4, 5, 6]],
-
-  // Line 4: Leo: Okay.
-  [0, 1],
-
-  // Line 5: Five minutes later Leo comes back.
-  [0, 1, 2, 3, 4, 5],
-
-  // Line 6: Leo: Mom! I found a nut.
-  [0, 1, 2, 3, [4, 50]],
-
-  // Line 7: Mom: It's a chestnut, looks like a nut but is another thing.
-  [0, 1, [2, 3], [6,7], [4,5], 8, 10, 11],
-
-  // Line 8: A squirrel runs to Leo and takes the chestnut.
-  [[0, 1], 2, 4, 3, 5, 6, [7, 8]],
-
-  // Line 9: Leo: Mom! The squirrel stole the chestnut.
-  [0, 1, [2, 3], 4, [5, 6]],
-
-  // Line 10: Dad: Food is ready!
-  [0, 1, 2, 3],
-
-  // Line 11: The family eats soy sausage.
-  [[0, 1], 2, [3, 4]],
-
-  // Line 12: Dad eats meat sausage. He is allergic to soy.
-  [0, 1, [2, 3], 4, 5, 6, [7, 8]],
-
-  // Line 13: Everyone is tired.
+  // Line 1: Luca is tired.
   [0, 1, 2],
 
-  // Line 14: The squirrel lies on a branch.
-  [[0, 1], 2, [3, 4, 5]],
+  // Line 2: Luca drinks coffee.
+  [0, 1, 2],
 
-  // Line 15: It farts so that its tail flaps.
-  [0, 1, 2, 3, 4, 5, 6, [7, 8]]
+  // Line 3: The coffee is expensive.
+  [[0, 1], 2, 3],
+
+  // Line 4: The coffee is a bit strange.
+  [[0, 1], 2, [3, 4], 5],
+
+  // Line 5: But the coffee helps.
+  [0, [1, 2], 3],
+
+  // Line 6: Finns drink this every day?
+  [0, 1, 2, 3, 4],
+
+  // Line 7: Luca is looking for the bus.
+  [0, [1, 2], [3, 4]],
+
+  // Line 8: The bus arrives.
+  [[0, 1], 2],
+
+  // Line 9: The driver doesn't speak English
+  [[0, 1], 2, 3, 4],
+
+  // Line 10: The driver doesn't say anything.
+  [[0, 1], 2, 3, 4],
+
+  // Line 11: Luca says: "Hi."
+  [0, 1, 2],
+
+  // Line 12: The driver doesn't say anything.
+  [[0, 1], 2, 3, 4],
+
+  //Line 13: It's snowing outside:
+  [2, [0, 1]],
+
+  // Line 14: A lot of snow.
+  [[0, 1, 2], 3],
+
+  // Line 15: It's cold.
+  [0, 1],
+
+  // Line 16: Really cold.
+  [0, 1],
+
+  // Line 17: The snow is beautiful.
+  [[0, 1], 2, 3],
+  
+  // Line 18: Luca smiles.
+  [0, 1],
+
+  // Line 19: This is Finland.
+  [0, 1, 2]
 
 ];
 

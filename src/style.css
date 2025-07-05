@@ -40,9 +40,13 @@
   
   /* Word styling */
   .story-word {
-    margin: 0 6px;
+    margin: 0 0px;
     display: inline-block;
     cursor: pointer;
+  }
+
+  .story-word-ending {
+  color: lightgreen; 
   }
   
   /* Button */
@@ -191,5 +195,67 @@
   
   .stop-button:hover {
     background-color: #ff1c1c;
+  }
+  
+  .quiz-button:hover {
+    background-color: #4a7c39;
+  }
+
+  .change-chapter-button {
+    background-color: #f8f9fa;
+    color: #202124;
+    padding: 1rem 1.5rem;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+    margin-top: 1rem;
+  }
+
+  .change-chapter-button:hover {
+    background-color: #f1f3f4;
+    border-color: #d2d5d9;
+    box-shadow: 0 1px 3px 0 rgba(60,64,67,0.302), 0 4px 8px 3px rgba(60,64,67,0.149);
+  }
+
+  /* Topic Dropdown Styles */
+  .topic-dropdown {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+    z-index: 1000;
+    margin-bottom: 10px;
+    overflow: hidden; /* Ensures the border-radius is respected by children */
+    min-width: 300px;
+  }
+
+  .topic-option {
+    padding: 16px 24px;
+    cursor: pointer;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1rem;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .topic-option:last-child {
+    border-bottom: none;
+  }
+
+  .topic-option:hover {
+    background-color: #f1f3f4;
+  }
+
+  .topic-option.active {
+    background-color: #e8f0fe;
+    font-weight: bold;
+    color: #1967d2;
   }
   
