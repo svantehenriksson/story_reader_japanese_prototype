@@ -263,7 +263,73 @@ const splitByBr = (storyText) => {
   Luca: Kiitos! Hei hei. <br>
   Myyjä: Kiitos! Moi moi. <br>
   `;
-    
+ 
+  const story4Finnish = `
+Pomo: Tervetuloa! <br>
+Luca: Kiitos. <br>
+Pomo ja Luca kättelevät. <br>
+Pomo: Minä olen Jarkko. <br>
+Luca: Minä olen Luca. <br>
+Jarkko: Haluatko kahvia? <br>
+Luca: Kyllä, kiitos. <br>
+Jarkko: Minäkin otan kahvia. Maanantaiaamu. <br>
+Miehet ottavat kahvia automaatista. <br>
+Automaatista lähtee kova ääni: surrrr. <br>
+Luca: Täällä on tosi vähän ihmisiä. <br>
+Jarkko: Hybridityö. <br>
+Luca: Ahaa. <br>
+Jarkko: Minulla on ensimmäinen työ sinulle. <br>
+Luca: Mikä työ? <br>
+Jarkko: Pilvi-integraatio. Asiakkaalle Ruoholahdessa. <br>
+Luca: Miten pääsen Ruoholahteen? <br>
+Jarkko: Ota raitiovaunu. Tai yrityksen sähköpyörä. Siinä on talvirenkaat. <br>
+`;
+
+const story4English = `
+Boss: Welcome! <br>
+Luca: Thanks. <br>
+The boss and Luca shake hands. <br>
+Boss: I'm Jarkko. <br>
+Luca: I'm Luca. <br>
+Jarkko: Do you want coffee? <br>
+Luca: Yes, please. <br>
+Jarkko: I'll have coffee too. Monday morning. <br>
+The men take coffee from the machine. <br>
+The machine makes a loud sound: surrrr. <br>
+Luca: There are very few people here. <br>
+Jarkko: Hybrid work. <br>
+Luca: Aha. <br>
+Jarkko: I have your first task. <br>
+Luca: What task? <br>
+Jarkko: Cloud integration. For a client in Ruoholahti. <br>
+Luca: How do I get to Ruoholahti? <br>
+Jarkko: Take the tram. Or the company e-bike. It has winter tires. <br>
+`;
+
+const story4SpokenFinnish = `
+Pomo: Tervetuloo! <br>
+Luca: Kiitos. <br>
+Pomo ja Luca kättelee. <br>
+Pomo: Mä oon Jarkko. <br>
+Luca: Mä oon Luca. <br>
+Jarkko: Haluuks kahvii? <br>
+Luca: Joo, kiitos. <br>
+Jarkko: Mäkin otan kahvii. Maanantaiaamu. <br>
+Miehet ottaa kahvii automaatist. <br>
+Automaatist lähtee kova ääni: surrrr. <br>
+Luca: Täl on tosi vähän ihmisiä. <br>
+Jarkko: Hybridityö. <br>
+Luca: Ahaa. <br>
+Jarkko: Mul on eka duuni sulle. <br>
+Luca: MIkä duuni? <br>
+Jarkko: Pilvi-integraatio. Asiakkaal Ruoholahdes. <br>
+Luca: Miten pääsen Ruoholahtee? <br>
+Jarkko: Ota ratikka. Tai firman sähköpyörä. Siin on talvirenkaat. <br>
+`;
+
+
+
+
   
   export const topics = [
     {
@@ -445,5 +511,22 @@ const splitByBr = (storyText) => {
             { question: 'Miksi isä ei syönyt soijamakkaraa?', options: ['Hän ei pidä siitä', 'Se oli loppu', 'Hän on allerginen soijalle', 'Hän on vegaani'], answer: 'Hän on allerginen soijalle' },
             { question: 'Mitä tapahtui tarinan lopussa?', options: ['Leo sai uuden kastanjan', 'Perhe meni nukkumaan', 'Orava pieraisi', 'Isä grillasi lisää ruokaa'], answer: 'Orava pieraisi' }
         ]
+      },
+      {name: "Ensimmäinen työpäivä",
+        storyData: {
+          storyTitle: "Ensimmäinen työpäivä",
+          finnishLines: splitByBr(story4Finnish),
+          englishLines: splitByBr(story4English),
+          spokenLines: splitByBr(story4SpokenFinnish),
+
+          FinnishEndingsIndex: extractFinnishEndingsIndex(story4Finnish),
+          FinnishTranslationIndex: [],
+          EnglishTranslationIndex: [],
+          quizData: [
+            { question: 'Mikä on Jarkkon nimi?', options: ['Pomo', 'Jarkko', 'Luca', 'Aino'], answer: 'Jarkko' },
+            { question: 'Mikä on Luca työ?', options: ['Pilvi-integraatio', 'Kahvi', 'Hissi', 'Vaatekauppa'], answer: 'Pilvi-integraatio' },
+            { question: 'Miten pääsee Ruoholahteen?', options: ['Raitiovaunulla', 'Sähköpyörällä', 'Raitiovaunulla ja sähköpyörällä', 'Ei pääse'], answer: 'Raitiovaunulla ja sähköpyörällä' }
+          ]
+        }
       }
   ]; 
