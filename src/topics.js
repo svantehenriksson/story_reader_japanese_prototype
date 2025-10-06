@@ -186,8 +186,84 @@ const splitByBr = (storyText) => {
   Ding! <br> 
   Luca astu-u ulos.`;
   
-  const story3Finnish = `Leo: Äiti! Minulla on nälkä! <br> Äiti: Kohta syödään. <br> Leo: Mutta minulla on nälkä nyt! <br> Äiti: Etsi ruokaa metsästä. <br> Leo: Okei. <br> Viiden minuutin päästä Leo tulee takaisin. <br> Leo: Äiti! Minä löysin pähkinän. <br> Äiti: Se on kastanja, pähkinän näköinen mutta eri asia. <br> Orava juoksee Leon luo ja ottaa kastanjan. <br> Leo: Äiti! Orava varasti kastanjan. <br> Isä: Ruoka on valmista! <br> Perhe syö soijamakkaraa. <br> Isä syö lihamakkaraa. Hän on allerginen soijalle. <br> Kaikki ovat väsyneitä. <br> Orava makaa oksalla. <br> Se pieraisee niin että sen häntä heilahtaa. Loppu. ❤️`;
+  const story3Finnish = `
+  Luca-lla on kylmä. <br>
+  Luca menee vaatekauppa-an. <br>
+  Myyjä: Hei! Miten voin auttaa? <br>
+  Luca: Minulla on kylmä. <br>
+  Myyjä: Suosittelen pitkiä kalsareita. <br>
+  Luca: Suosittelet pitkiä kalsareita? <br>
+  Myyjä: Kyllä. Kuten kalsarit, mutta pitkät. Ne näyttävät leggingseiltä. <br>
+  Luca: Miesten leggingsit. <br>
+  Myyjä: Ja sinun takki on ohut. Osta talvitakki. <br>
+  Luca: Missä talvitakit ovat? <br>
+  Myyjä: Suoraan eteenpäin ja vasemmalle. <br>
+  Luca: Kiitos. <br>
+  Luca löytää mustan talvitakin. <br>
+  Myyjä: Siinä kaikki? <br>
+  Luca: Siinä kaikki. <br>
+  Myyjä: Osta vielä pipo. <br>
+  Luca: Okei, pipo vielä. <br>
+  Myyjä: Musta vai valkoinen? <br>
+  Luca: Valkoinen. <br>
+  Myyjä: 238 euroa, kiitos. <br>
+  Luca maksaa kortilla. <br>
+  Luca: Kiitos! Hei hei. <br>
+  Myyjä: Kiitos! Moi moi. <br>
+  `;
   
+  const story3English = `
+  Luca is cold. <br>
+  Luca goes to a clothing store. <br>
+  Salesperson: Hi! How can I help? <br>
+  Luca: I'm cold. <br>
+  Salesperson: I recommend long underwear. <br>
+  Luca: You recommend long underwear? <br>
+  Salesperson: Yes. Like underwear, but long. They look like leggings. <br>
+  Luca: Men's leggings. <br>
+  Salesperson: And your jacket is thin. Buy a winter coat. <br>
+  Luca: Where are the winter coats? <br>
+  Salesperson: Straight ahead and to the left. <br>
+  Luca: Thanks. <br>
+  Luca finds a black winter coat. <br>
+  Salesperson: Is that all? <br>
+  Luca: That’s all. <br>
+  Salesperson: Buy a beanie too. <br>
+  Luca: Okay, a beanie too. <br>
+  Salesperson: Black or white? <br>
+  Luca: White. <br>
+  Salesperson: 238 euros, please. <br>
+  Luca pays by card. <br>
+  Luca: Thanks! Bye bye. <br>
+  Salesperson: Thanks! Bye bye. <br>
+  `;
+  
+  const story3SpokenFinnish = `
+  Luca-l on kylmä. <br>
+  Luca menee vaatekauppa-a. <br>
+  Myyjä: Moi! Mite voin auttaa? <br>
+  Luca: Mul on kylmä. <br>
+  Myyjä: Suosittelen pitkii kalsarei. <br>
+  Luca: Suosittelet pitkii kalsarei? <br>
+  Myyjä: Joo. Niinku kalsarit mut pitkät. Ne näyttää leggingseilt. <br>
+  Luca: Miesten leggingsit. <br>
+  Myyjä: Ja sun takki on ohut. Osta talvitakki. <br>
+  Luca: Missä talvitakit on? <br>
+  Myyjä: Suoraa eteenpäi ja vasemmalle. <br>
+  Luca: Kiitos. <br>
+  Luca löytää mustan talvitakin. <br>
+  Myyjä: Siinä kaikki? <br>
+  Luca: Siinä kaikki. <br>
+  Myyjä: Osta viel pipo. <br>
+  Luca: Okei, pipo viel. <br>
+  Myyjä: Musta vai valkonen? <br>
+  Luca: Valkonen. <br>
+  Myyjä: Kakssata kolkyt kaheksan euroo, kiitos. <br>
+  Luca maksaa kortil. <br>
+  Luca: Kiitos! Hei hei. <br>
+  Myyjä: Kiitos! Moi moi. <br>
+  `;
+    
   
   export const topics = [
     {
@@ -289,8 +365,24 @@ const splitByBr = (storyText) => {
           ['Other greetings are:',
            'Moi (roughly "Hi", more informal)',
            'Hyvää päivää / Päivää (Good day, formal)',
-           'Terve (a bit less formal)'
-        ]
+           'Hyvää huomenta / Huomenta (Good morning, formal)',
+           'Hyvää iltaa / Iltaa (Good evening, formal)',
+           'Terve (a bit like "Hi", less formal)'
+        ],
+        ['Sano = says (he/she/it), from sanoa = to say'],
+        ['Sataa lunta literally translates to it is raining snow.'],
+        ['Lunta = lumi (snow) + -ta, again the "partitive" form.',
+          'Notice that the word "lumi" changes quite a lot to "lunta".'
+        ],
+        ['On kylmä would literally translate to Is cold.',
+          'In Finnish "It" would be "Se", but it is not used for such general descriptions.'
+        ],
+        ['Tosi kylmä is a bit informal could also be said as Erittäin (very) kylmä.'],
+        ['Kaunis = kaunis (beautiful) + -ta, again the "partitive" form.'],
+        ['hymyilee = hymyillä + -ee'],
+        ['Tämä on Suomi = This is Finland.']
+
+      ]
       },
       quizData: [
         { question: 'Missä Luca on?', options: ['Kotona', 'Lentokentällä', 'Bussissa', 'Hississä'], answer: 'Lentokentällä' },
@@ -332,17 +424,20 @@ const splitByBr = (storyText) => {
       ]
     },
     {
-        name: "Orava ja kastanja",
+        name: "Vaatekauppa",
         storyData: {
-          storyTitle: "Orava ja kastanja",
+          storyTitle: "Vaatekauppa",
           finnishLines: splitByBr(story3Finnish),
-          // Note: English, spoken, and index data are not available for this story.
-          // The component will handle this gracefully.
-          englishLines: [], 
-          spokenLines: [],
-          FinnishEndingsIndex: [],
-          FinnishTranslationIndex: [],
-          EnglishTranslationIndex: []
+          englishLines: splitByBr(story3English),
+          spokenLines: splitByBr(story3SpokenFinnish),
+          
+          FinnishEndingsIndex: extractFinnishEndingsIndex(story3Finnish),
+          FinnishTranslationIndex: [ [[0,1], 2, 3],
+          [0,1,[2,3]] 
+        ],
+          EnglishTranslationIndex: [ [0,1,2],
+          [0,1,[2,3,4,5]]
+      ]
         },
         quizData: [
             { question: 'Miten sanotaan "I am hungry" suomeksi?', options: ['Minulla on nälkä', 'Olen nälkä', 'Minä syön nälkä', 'Minulla on syönyt'], answer: 'Minulla on nälkä' },
