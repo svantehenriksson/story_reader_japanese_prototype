@@ -157,7 +157,7 @@ const splitByBr = (storyText) => {
   The woman says: "Hi." <br> 
   The woman smiles. <br> 
   Luca smiles as well. <br> 
-  Luca asks: "What's your name?" <br> 
+  Luca asks: "What is your name?" <br> 
   The woman says: "Aino." <br> 
   Luca: "My name is Luca." <br> 
   Luca: "I live on the second floor." <br> 
@@ -179,9 +179,9 @@ const splitByBr = (storyText) => {
   Luca hymyil-ee myös. <br> 
   Luca kysy-y: "Mikä sinun nime-si on?" <br> 
   Nainen sano-o: "Aino." <br> 
-  Luca sano-o: "Minun nimi on Luca." <br> 
-  Luca sano-o: "Asun toise-ssa kerrokse-ssa." <br> 
-  Aino sano-o: "Asun yläkerra-ssa-si." <br> 
+  Luca: "Mun nimi on Luca." <br> 
+  Luca: "Asun toka-s kerrokse-s." <br> 
+  Aino: "Asun yläkerra-ssa-s." <br> 
   Hissi pysähty-y. <br> 
   Ding! <br> 
   Luca astu-u ulos.`;
@@ -572,11 +572,11 @@ Leffan jälkee Luca menee nukkuu. <br>
             [0, [1, 2], 3], 
             [0, [1, 2]], 
             [0, [1, 2], 3], 
-            [0, [1, 2], 3, [4, 5, 6], [6, 7], 8, 9], 
+            [0, [1, 2], 3, [4, 5, 6], 7], 
             [0, [1, 2], 3], 
-            [0, [1, 2], [3, 6], [4, 5]], 
-            [0, [1, 2], 3, [4, 5], [6, 7], [8, 9]], 
-            [0, [1, 2], 3, [4, 5], [6, 7], [8, 9]], 
+            [0, 1, 2, 3, 4],
+            [0, 1, [2, 3, 4, 5]],
+            [0, 1, [2, 3, 4]], 
             [0, [1, 2]], 
             [0], 
             [0, [1, 2], 3]
@@ -592,12 +592,14 @@ Leffan jälkee Luca menee nukkuu. <br>
             [[0, 1], 2, 3], 
             [[0, 1], 2], 
             [0, 1, [2, 3]], 
-            [0, 1, 2, [3, 4, 5], [6, 7]], 
+            [0, 1, 2, [4, 5], 3], 
             [[0, 1], 2, 3], 
-            [0, 1, 2, [3, 4], 5, 6], 
-            [0, 1, 2, 3, [4, 5], [6, 7], 8], 
-            [0, 1, 2, 3, 4, [5, 6], 7], 
-            [[0, 1], 2], [0], [0, 1, 2]
+            [0, 1, 2, 3, 4], 
+            [0, [1,2], [3, 4, 5, 6]], 
+            [0, [1, 2], [3, 4, 5]], 
+            [[0, 1], 2], 
+            [0], 
+            [0, 1, 2]
         ],
         grammarNotes: [
           ['-iin in hissiin means into.'],
