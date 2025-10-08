@@ -147,7 +147,7 @@ const splitByBr = (storyText) => {
   Luca astu-u ulos.`;
   
   const story2English = `
-  Luca gets into the elevator. <br> 
+  Luca goes into the elevator. <br> 
   There is a woman in the elevator. <br> 
   The woman stands silently. <br> 
   Luca also stands silently. <br> 
@@ -327,6 +327,59 @@ Luca: Miten pääsen Ruoholahtee? <br>
 Jarkko: Ota ratikka. Tai firman sähköpyörä. Siin on talvirenkaat. <br>
 `;
 
+const story5Finnish = `
+Töiden jälkeen Luca on yksin kotona. <br>
+Luca on keittiössä. <br>
+Luca katsoo kaappiin. <br>
+Kaapissa on teetä ja kahvia. <br>
+Kaapissa on myös näkkileipää. <br>
+Luca katsoo jääkaappiin. <br>
+Jääkaapissa on maitoa ja voita. <br>
+Maito on vanhaa. <br>
+Luca keittää kupin teetä. <br>
+Luca laittaa voita näkkileivälle. <br>
+Näkkileipä maistuu vähän oudolta. <br>
+Lämmin tee maistuu hyvältä. <br>
+Luca selaa sosiaalista mediaa. <br>
+Teen jälkeen Luca katsoo elokuvaa. <br>
+Elokuvan jälkeen Luca menee nukkumaan. <br>
+`;
+
+const story5English = `
+After work, Luca is home alone. <br>
+Luca is in the kitchen. <br>
+Luca looks in the cupboard. <br>
+There is tea and coffee in the cupboard. <br>
+There is also crispbread. <br>
+Luca looks in the fridge. <br>
+There is milk and butter in the fridge. <br>
+The milk is old. <br>
+Luca makes a cup of tea. <br>
+Luca puts butter on the crispbread. <br>
+The crispbread tastes a bit strange. <br>
+The warm tea tastes good. <br>
+Luca scrolls through social media. <br>
+After the tea, Luca watches a movie. <br>
+After the movie, Luca goes to sleep. <br>
+`;
+
+const story5SpokenFinnish = `
+Töiden jälkee Luca on yksin kotona. <br>
+Luca on keittiös. <br>
+Luca kattoo kaappiin. <br>
+Kaapis on teetä ja kahvii. <br>
+Kaapis on kans näkkileipää. <br>
+Luca kattoo jääkaappiin. <br>
+Jääkaapis on maitoo ja voita. <br>
+Maito on vanhaa. <br>
+Luca keittää kupin teetä. <br>
+Luca laittaa voita näkkileiväl. <br>
+Näkkileipä maistuu vähä oudolt. <br>
+Lämmin tee maistuu hyvält. <br>
+Luca selaa somee. <br>
+Teen jälkee Luca kattoo leffaa. <br>
+Leffan jälkee Luca menee nukkuu. <br>
+`;
 
 
 
@@ -334,6 +387,7 @@ Jarkko: Ota ratikka. Tai firman sähköpyörä. Siin on talvirenkaat. <br>
   export const topics = [
     {
       name: "Luca saapuu Suomeen",
+      illustration: "image1.png",
       storyData: {
         storyTitle: "Luca saapuu Suomeen",
         finnishLines: splitByBr(story1Finnish),
@@ -343,10 +397,48 @@ Jarkko: Ota ratikka. Tai firman sähköpyörä. Siin on talvirenkaat. <br>
           [3], [], [3], [3], [4], [], [1, 3], [2, 4], [2], [4], [], [], [], [3], [2], [], [], [3], [2], []
         ],
         FinnishTranslationIndex: [
-          [0, 1, 2, 3], [0, 1, 2], [0, 1, [2, 3]], [0, 1, [2,3]], [0, 1, 2, [3, 4]], [0, 1, 2], [[0, 1], [2, 3], 4, 5, 6], [0, [1, 2], [3, 4]], [0, 1, 2], [0, 1, 2, [3, 4]], [0, 1, 2, 3], [0, 1, 2], [0, 1, 2, 3], [0, [1, 2]], [0, [1, 2]], [0, 1], [0, 1], [0, 1, [2, 3]], [0, [1, 2]], [0, 1, 2]
+          [0, 1, 2, 3], 
+          [0, 1, 2], 
+          [0, 1, [2, 3]], 
+          [0, 1, [2,3]], 
+          [0, 1, 2, [3, 4]], 
+          [0, 1, 2], 
+          [[0, 1], [2, 3], 4, 5, 6], 
+          [0, [1, 2], [3, 4]], 
+          [0, 1, 2], 
+          [0, 1, 2, [3, 4]], 
+          [0, 1, 2, 3], 
+          [0, 1, 2], 
+          [0, 1, 2, 3], 
+          [0, [1, 2, 3]], 
+          [0, [1, 2]], 
+          [0, 1], 
+          [0, 1], 
+          [0, 1, [2, 3]], 
+          [0, [1, 2]], 
+          [0, 1, 2]
         ],
         EnglishTranslationIndex: [
-          [0, 1, [3, 4], 2], [0, 1, 2], [0, 1, 2], [[0, 1], 2, 3], [[0, 1], 2, [3, 4], 5], [0, [1, 2], 3], [0, 1, 2, 3, 4], [0, [1, 2], [3, 4]], [[0, 1], 2], [[0, 1], 2, [3, 4]], [0, 1, 2, 3], [0, 1, 2], [0, 1, 2, 3], [[0, 1], [2, 3]], [[0, 1], 2], [0, 1], [0, 1], [[0, 1], [2, 3]], [0, [1, 2]], [0, 1, 2]
+          [0, 1, [3, 4], 2], 
+          [0, 1, 2], 
+          [0, 1, 2], 
+          [[0, 1], 2, 3], 
+          [[0, 1], 2, [3, 4], 5], 
+          [0, [1, 2], 3], 
+          [0, 1, 2, 3, 4], 
+          [0, [1, 2], [3, 4]], 
+          [[0, 1], 2], 
+          [[0, 1], 2, 3, 4], 
+          [[0, 1], 2, 3, 4], 
+          [0, 1, 2], 
+          [[0, 1], 2, 3, 4], 
+          [2, [0, 1]], 
+          [[0, 1, 2], 3], 
+          [0, 1], 
+          [0, 1], 
+          [[0, 1], 2, 3], 
+          [0, [1, 2]], 
+          [0, 1, 2]
         ],
         grammarNotes: [
           ['GENERAL NOTE:',
@@ -459,6 +551,7 @@ Jarkko: Ota ratikka. Tai firman sähköpyörä. Siin on talvirenkaat. <br>
     },
     {
       name: "Luca hississä",
+      illustration: "image2.png",
       storyData: {
         storyTitle: "Luca hississä",
         finnishLines: splitByBr(story2Finnish),
@@ -469,17 +562,76 @@ Jarkko: Ota ratikka. Tai firman sähköpyörä. Siin on talvirenkaat. <br>
         ],*/
         FinnishEndingsIndex: extractFinnishEndingsIndex(story2Finnish),
         FinnishTranslationIndex: [
-            [0, 1, [2, 3]], [[0, 1], 2, 3], [0, [1, 2], 3], [0, [1, 2], 3, 4], [0, [1, 2], [3, 4]], [0, [1, 2], [3, 4]], [0, [1, 2], 3], [0, [1, 2], 3], [0, [1, 2]], [0, [1, 2], 3], [0, [1, 2], 3, [4, 5], [6, 7], 8, 9], [0, [1, 2], 3], [0, [1, 2], 3, [4, 5], 6, 7], [0, [1, 2], 3, [4, 5], [6, 7], [8, 9]], [0, [1, 2], 3, [4, 5], [6, 7], [8, 9]], [0, [1, 2]], [0], [0, [1, 2], 3]
+            [0, 1, [2, 3]], 
+            [[0, 1], 2, 3], 
+            [0, [1, 2], 3], 
+            [0, [1, 2], 3, 4], 
+            [0, [1, 2], [3, 4]], 
+            [0, [1, 2], [3, 4]], 
+            [0, [1, 2], 3], 
+            [0, [1, 2], 3], 
+            [0, [1, 2]], 
+            [0, [1, 2], 3], 
+            [0, [1, 2], 3, [4, 5, 6], [6, 7], 8, 9], 
+            [0, [1, 2], 3], 
+            [0, [1, 2], [3, 6], [4, 5]], 
+            [0, [1, 2], 3, [4, 5], [6, 7], [8, 9]], 
+            [0, [1, 2], 3, [4, 5], [6, 7], [8, 9]], 
+            [0, [1, 2]], 
+            [0], 
+            [0, [1, 2], 3]
         ],
         EnglishTranslationIndex: [
-            [0, 1, [2, 3], [4, 5]], [0, 1, 2, 3, [4, 5], [6, 7]], [[0, 1], 2, 3], [0, 1, 2, 3], [0, 1, [2, 3], [4, 5]], [[0, 1], 2, [3, 4], 5], [0, 1, 2], [[0, 1], 2, 3], [[0, 1], 2], [0, 1, [2, 3]], [0, 1, 2, [3, 4, 5], [6, 7]], [[0, 1], 2, 3], [0, 1, 2, [3, 4], 5, 6], [0, 1, 2, 3, [4, 5], [6, 7], 8], [0, 1, 2, 3, 4, [5, 6], 7], [[0, 1], 2], [0], [0, 1, 2]
+            [0, 1, [2, 3, 4]], 
+            [[4, 5, 6], [0, 1], [2, 3]], 
+            [[0, 1], 2, 3], 
+            [0, 2, 1, 3], 
+            [0, 1, [2, 3, 4]], 
+            [[0, 1], 2, [3, 4], 5], 
+            [0, 1, 2], 
+            [[0, 1], 2, 3], 
+            [[0, 1], 2], 
+            [0, 1, [2, 3]], 
+            [0, 1, 2, [3, 4, 5], [6, 7]], 
+            [[0, 1], 2, 3], 
+            [0, 1, 2, [3, 4], 5, 6], 
+            [0, 1, 2, 3, [4, 5], [6, 7], 8], 
+            [0, 1, 2, 3, 4, [5, 6], 7], 
+            [[0, 1], 2], [0], [0, 1, 2]
         ],
         grammarNotes: [
-          ['First page'],
-          ['Second page'],
-          ['Third page'],
-          ['Fourth page'],
-          ['Fifth page'],
+          ['-iin in hissiin means into.'],
+          ['-ssä in hississä means in. (as in "in the elevator")'],
+          ['Seisoa = to stand',
+             'The form seiso-o means he/she/it stands',
+            <br/>,
+          'Minä seison = I stand',
+          'Sinä seisot = you stand',
+          'Hän seisoo = he/she/it stands',
+          'Me seisomme = we stand',
+          'Te seisotte = you all stand',
+          'He seisovat = they stand'
+          ],
+          ['In seiso-o the end -o refers to that he stands.'],
+          ['-ta in nais-ta refers to that she is the object of his look.'],
+          ['And now he is the object of her look, which causes -a to Luca-a.',
+            <br/>,
+          'You can compare: Nainen katso-o Luca-a. with Luca katso-o nais-ta'
+          ],
+          [],
+          [],
+          ['-ee in hymyil-ee means that she smiles.',
+            <br/>,
+          'hymyillä = to smile',
+          <br/>,
+          'Minä hymyilen = I smile',
+          'Sinä hymyilet = you smile',
+          'Hän hymyilee = he/she smiles',
+          'Me hymyilemme = we smile',
+          'Te hymyilette = you all smile',
+          'He hymyilevät = they smile'
+        ],
+        []
         ]
       },
       quizData: [
@@ -491,6 +643,7 @@ Jarkko: Ota ratikka. Tai firman sähköpyörä. Siin on talvirenkaat. <br>
     },
     {
         name: "Vaatekauppa",
+        illustration: "/horizontal_illustration.png",
         storyData: {
           storyTitle: "Vaatekauppa",
           finnishLines: splitByBr(story3Finnish),
@@ -513,6 +666,7 @@ Jarkko: Ota ratikka. Tai firman sähköpyörä. Siin on talvirenkaat. <br>
         ]
       },
       {name: "Ensimmäinen työpäivä",
+        illustration: "/horizontal_illustration.png",
         storyData: {
           storyTitle: "Ensimmäinen työpäivä",
           finnishLines: splitByBr(story4Finnish),
@@ -524,6 +678,23 @@ Jarkko: Ota ratikka. Tai firman sähköpyörä. Siin on talvirenkaat. <br>
           EnglishTranslationIndex: [],
           quizData: [
             { question: 'Mikä on Jarkkon nimi?', options: ['Pomo', 'Jarkko', 'Luca', 'Aino'], answer: 'Jarkko' },
+            { question: 'Mikä on Luca työ?', options: ['Pilvi-integraatio', 'Kahvi', 'Hissi', 'Vaatekauppa'], answer: 'Pilvi-integraatio' },
+            { question: 'Miten pääsee Ruoholahteen?', options: ['Raitiovaunulla', 'Sähköpyörällä', 'Raitiovaunulla ja sähköpyörällä', 'Ei pääse'], answer: 'Raitiovaunulla ja sähköpyörällä' }
+          ]
+        }
+      },
+      {name: "Yksin kotona",
+        illustration: "/horizontal_illustration.png",
+        storyData: {
+          storyTitle: "Yksin kotona",
+          finnishLines: splitByBr(story5Finnish),
+          englishLines: splitByBr(story5English),
+          spokenLines: splitByBr(story5SpokenFinnish),
+
+          FinnishEndingsIndex: extractFinnishEndingsIndex(story5Finnish),
+          FinnishTranslationIndex: [],
+          EnglishTranslationIndex: [],
+          quizData: [
             { question: 'Mikä on Luca työ?', options: ['Pilvi-integraatio', 'Kahvi', 'Hissi', 'Vaatekauppa'], answer: 'Pilvi-integraatio' },
             { question: 'Miten pääsee Ruoholahteen?', options: ['Raitiovaunulla', 'Sähköpyörällä', 'Raitiovaunulla ja sähköpyörällä', 'Ei pääse'], answer: 'Raitiovaunulla ja sähköpyörällä' }
           ]

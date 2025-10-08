@@ -342,7 +342,7 @@ const StoryReader = ({ goToQuiz, topic, topics, handleTopicSelect, topicIndex: c
 
       <div className="story-illustration-container">
         <img className="story-illustration"
-          src={process.env.PUBLIC_URL + '/horizontal_illustration.png'}
+          src={process.env.PUBLIC_URL + (topic.illustration || '/horizontal_illustration.png')}
           alt="Leo and family barbecue"
         />
       </div>
