@@ -189,25 +189,25 @@ const splitByBr = (storyText) => {
   const story3Finnish = `
   Luca-lla on kylmä. <br>
   Luca menee vaatekauppa-an. <br>
-  Myyjä: Hei! Miten voin auttaa? <br>
-  Luca: Minulla on kylmä. <br>
-  Myyjä: Suosittelen pitkiä kalsareita. <br>
-  Luca: Suosittelet pitkiä kalsareita? <br>
-  Myyjä: Kyllä. Kuten kalsarit, mutta pitkät. Ne näyttävät leggingseiltä. <br>
-  Luca: Miesten leggingsit. <br>
-  Myyjä: Ja sinun takki on ohut. Osta talvitakki. <br>
-  Luca: Missä talvitakit ovat? <br>
-  Myyjä: Suoraan eteenpäin ja vasemmalle. <br>
+  Myyjä: Hei! Miten voi-n auttaa? <br>
+  Luca: Minu-lla on kylmä. <br>
+  Myyjä: Suosittel-en pitk-iä kalsar-eita. <br>
+  Luca: Suosittel-et pitk-iä kalsar-eita? <br>
+  Myyjä: Kyllä. Kuten kalsarit, mutta pitkä-t. Ne näyttä-vät leggings-eiltä. <br>
+  Luca: Mies-ten leggingsit. <br>
+  Myyjä: Ja sinu-n takki on ohut. Osta talvitakki. <br>
+  Luca: Missä talvitaki-t ovat? <br>
+  Myyjä: Suoraan eteenpäin ja vasemma-lle. <br>
   Luca: Kiitos. <br>
-  Luca löytää mustan talvitakin. <br>
+  Luca löytää musta-n talvitaki-n. <br>
   Myyjä: Siinä kaikki? <br>
   Luca: Siinä kaikki. <br>
   Myyjä: Osta vielä pipo. <br>
   Luca: Okei, pipo vielä. <br>
   Myyjä: Musta vai valkoinen? <br>
   Luca: Valkoinen. <br>
-  Myyjä: 238 euroa, kiitos. <br>
-  Luca maksaa kortilla. <br>
+  Myyjä: 238 euro-a, kiitos. <br>
+  Luca maksaa korti-lla. <br>
   Luca: Kiitos! Hei hei. <br>
   Myyjä: Kiitos! Moi moi. <br>
   `;
@@ -216,9 +216,9 @@ const splitByBr = (storyText) => {
   Luca is cold. <br>
   Luca goes to a clothing store. <br>
   Salesperson: Hi! How can I help? <br>
-  Luca: I'm cold. <br>
-  Salesperson: I recommend long underwear. <br>
-  Luca: You recommend long underwear? <br>
+  Luca: I am cold. <br>
+  Salesperson: I recommend longjohns. <br>
+  Luca: You recommend longjohns? <br>
   Salesperson: Yes. Like underwear, but long. They look like leggings. <br>
   Luca: Men's leggings. <br>
   Salesperson: And your jacket is thin. Buy a winter coat. <br>
@@ -242,24 +242,24 @@ const splitByBr = (storyText) => {
   Luca-l on kylmä. <br>
   Luca menee vaatekauppa-a. <br>
   Myyjä: Moi! Mite voin auttaa? <br>
-  Luca: Mul on kylmä. <br>
-  Myyjä: Suosittelen pitkii kalsarei. <br>
-  Luca: Suosittelet pitkii kalsarei? <br>
+  Luca: Mu-lla on kylmä. <br>
+  Myyjä: Suosittel-en pitk-ii kalsar-eit. <br>
+  Luca: Suosittel-et pitk-ii kalsar-eit? <br>
   Myyjä: Joo. Niinku kalsarit mut pitkät. Ne näyttää leggingseilt. <br>
-  Luca: Miesten leggingsit. <br>
-  Myyjä: Ja sun takki on ohut. Osta talvitakki. <br>
-  Luca: Missä talvitakit on? <br>
-  Myyjä: Suoraa eteenpäi ja vasemmalle. <br>
+  Luca: Mies-ten leggingsit. <br>
+  Myyjä: Ja su-n takki on ohut. Osta talvitakki. <br>
+  Luca: Mis talvitak-it on? <br>
+  Myyjä: Suoraa eteenpäin ja vasemma-l. <br>
   Luca: Kiitos. <br>
-  Luca löytää mustan talvitakin. <br>
+  Luca löytää musta-n talvitaki-n. <br>
   Myyjä: Siinä kaikki? <br>
   Luca: Siinä kaikki. <br>
   Myyjä: Osta viel pipo. <br>
   Luca: Okei, pipo viel. <br>
   Myyjä: Musta vai valkonen? <br>
   Luca: Valkonen. <br>
-  Myyjä: Kakssata kolkyt kaheksan euroo, kiitos. <br>
-  Luca maksaa kortil. <br>
+  Myyjä: 238 euro-o, kiitti. <br>
+  Luca maksaa korti-l. <br>
   Luca: Kiitos! Hei hei. <br>
   Myyjä: Kiitos! Moi moi. <br>
   `;
@@ -654,11 +654,165 @@ Leffan jälkee Luca menee nukkuu. <br>
           
           FinnishEndingsIndex: extractFinnishEndingsIndex(story3Finnish),
           FinnishTranslationIndex: [ [[0,1], 2, 3],
-          [0,1,[2,3]] 
+          [0,1,[2,3]],
+          [0, 1, 2, [3, 4], 5],
+          [0, [1, 2], 3, 4],
+          [0, [1, 2], [3, 4, 5, 6]],
+          [0, [1, 2], [3, 4, 5, 6]],
+          [0, 1, 2, 3, 4, [5,6], 7, [8, 9,], [10, 11]],
+          [0, [1, 2], 3],
+          [0, 1, [2, 3], 4, 5, 6, 7, 8],
+          [0, 1, [2, 3], 4],
+          [0, 1, 2, 3, [4, 5]],
+          [0, 1],
+          [0, 1, [2, 3, 4, 5]],
+          [0, [1, 2]],
+          [0, [1, 2]],
+          [0, 1, 2, 3],
+          [0, 1, 2, 3],
+          [0, 1, 2, 3],
+          [0, 1],
+          [0, 1, [2, 3], 4],
+          [0, 1, [2, 3]],
+          [0, 1, 2, 3],
+          [0, 1, 2, 3]
+
+
         ],
           EnglishTranslationIndex: [ [0,1,2],
-          [0,1,[2,3,4,5]]
-      ]
+          [0,1,[2,3,4,5]],
+          [0, 1, 2, [3, 4], 5],
+          [0, 1, 2, 3],
+          [0, [1, 2], 3],
+          [0, [1, 2], 3],
+          [0, 1, 2, 3, 4, 5, 6, [7, 8], 9],
+          [0, 1, 2],
+          [0, 1, 2, 3, 4, 5, 6, [7, 8, 9]],
+          [0, 1, [3, 4, 5], 2],
+          [0, 1, 2, 3, [4, 5, 6]],
+          [0, 1],
+          [0, 1, [2, 3, 4, 5]],
+          [0, [1, 2, 3]],
+          [0, [1, 2, 3]],
+          [0, 1, 4, [2,3]],
+          [0, 1, 2, [3, 4]],
+          [0, 1, 2, 3],
+          [0, 1],
+          [0, 1, 2, 3],
+          [0, 1, [2, 3]],
+          [0, 1, 2, 3],
+          [0, 1, 2, 3]
+
+
+      ],
+      grammarNotes: [
+        ['Here you see a difference in logic between Finnish and English.',
+        'Luca on kylmä would also mean Luca is cold, but that would sound like he is cold emotionally.',
+        'Luca-lla on kylmä means he is feeling cold.',
+      <br/>,
+      'The -lla ending literally means on or with and it is used to describe what someone has or is experiencing.',
+      'Lucalla on kahvi is a more concrete sentence meaning that Luca has a coffee.',
+      <br/>,
+      'It might take some time to get used to how -lla is used like this.'
+    ],
+        ['vaate=cloth / clothing item, kauppa=store and in Finnish words are often written together.',
+          '-an means into.'
+        ],
+        ['voin = I can. You can also write the long form minä voin = I can.',
+          'In Finnish you do not have to write the word minä for I as the form tells who is doing the action.',
+          <br/>,
+          'voida = can, to be able to.',
+          'Minä voin = I can',
+          'Sinä voit = you can',
+          'Hän voi = he/she can',
+          'Me voimme = we can',
+          'Te voitte = you all can',
+          'He voivat = they can'
+        ],
+        ['Again the same -lla form for Luca to say he is feeling cold.',
+          'Minä olen kylmä = I am cold would sound like he is cold emotionally.',
+        ],
+        ['Suosittel-en, short for minä suosittelen = I recommend',
+          'suositella = to recommend',
+          <br/>,
+          'kalsarit = underwear',
+          'pitkät kalsarit = long underwear / longjohns',
+          'Kalsarit is always plural in Finnish. Like scissors or trousers in English that are always plural.'
+        ],
+        ['The question "Suosittel-et pitkiä kalsareita? is nearly identical to the phrase in the previous sentence.',
+          <br/>,
+          'A question "Do you recommend longjohns?" would be "Suosittel-et-ko pitkiä kalsareita?"',
+          'There would be the additional ending -ko, to mark a question.'
+        ],
+        ['näyttää = to look like, to show. Ne näyttä-vät = they look like.'
+        ],
+        ['mies = man, miesten = mens\'',
+          'Something for one man, man\'s would be miehen.',
+          <br/>,
+          'When you have something for many, or many owners of something, a letter t is often added before the -en ending.',
+          'It takes time to get used to these forms.'
+         ],
+         ['talvi = winter, takki = coat / jacket, talvitakki = winter coat, written together in Finnish.',
+          <br/>,
+          'Notice also how there are no "a" nor "the" words in Finnish, but you get from context whether we mean a specific winter coat or a general winter coat.'
+         ],
+         ['olla = to be is the basic form, ne ovat = they are.',
+          'talvitakit ovat = the winter coats are',
+          <br/>,
+          'olla is the most common verb in Finnish and it can be tricky,',
+          'so it is worth studying and paying attention to all the different forms of olla.',
+          <br/>,
+          'Minä olen = I am',
+          'Sinä olet = you are',
+          'Hän/se on = he/she/it is',
+          'Me olemme = we are',
+          'Te olette = you all are',
+          'He/ne ovat = they are',
+          <br/>,
+          'takki = coat, taki-t = the coats.',
+          'coats in general would be takkeja.',
+          'While for a single jacket takki can be either a coat or the coat, depending on context,',
+          'when there are many, the word changes depending on whether we mean the coats or many coats in general.',
+          <br/>,
+          'Also notice the different word order for the question in Finnish and English.'],
+          [],
+          [],
+          ['The -n ending in musta-n talvitaki-n is often used in this kind of sentence,',
+            'where an action is completed.',
+            <br/>,
+            'We have seen the other form with -a, -ia, -ta type endings, where an action is performed, but not a final, complete one like here.',
+            'Remember for example Luca katsoo nais-ta that means Luca looks at her.',
+            'If he finds a woman, we consider it a more "complete" action and would say Luca löytää nais-en.',
+            <br/>,
+            'It is difficult to explain these forms in a simple way',
+            'With time you get used to them and their logic.'
+          ],
+          ['Siinä means there, but it is a bit different than the word there in English.',
+            'It is used to point to something specific, often something that is nearby.',
+            'It\'s meaning is often also closer to therein.',
+            'Tuolla is there as in over there.'
+          ],
+          [],
+          ['ostaa = to buy, osta = buy, as in a command or request'],
+          ['Okei = okay might be closer to spoken language than a dictionary word.',
+          'Hyvä on (roughly: fine) or sopii (roughly: it suits/works) are often used.'
+          ],
+          [],
+          [],
+          ['There is no word please in Finnish. Adding kiitos = thank you at the end is as close as it gets.'],
+          ['The -lla ending is quite versatile in Finnish.',
+            'While the most common meaning is "on" something, it can mean with, by, at etc in different contexts.',
+            'Remember also that Luca-lla on kylmä meant Luca is feeling cold / Luca has it cold.',
+            <br/>,
+            'maksaa = to pay',
+            'Here the same form pay is also used for he pays (hän maksaa).',
+            'This often happens, but often also he/she also has a different form.',
+            'Remember for example Luca katsoo = Luca looks, even though the basic form is katsoa'
+          ],
+          [],
+          []
+
+    ]
         },
         quizData: [
             { question: 'Miten sanotaan "I am hungry" suomeksi?', options: ['Minulla on nälkä', 'Olen nälkä', 'Minä syön nälkä', 'Minulla on syönyt'], answer: 'Minulla on nälkä' },
