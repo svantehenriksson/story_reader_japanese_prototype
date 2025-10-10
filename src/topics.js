@@ -669,7 +669,7 @@ Leffan jälkee Luca menee nukkuu. <br>
     },
     {
         name: "Vaatekauppa",
-        illustration: "/horizontal_illustration.png",
+        illustration: "/image3.png",
         storyData: {
           storyTitle: "Vaatekauppa",
           finnishLines: splitByBr(story3Finnish),
@@ -846,7 +846,7 @@ Leffan jälkee Luca menee nukkuu. <br>
         ]
       },
       {name: "Ensimmäinen työpäivä",
-        illustration: "/horizontal_illustration.png",
+        illustration: "/image4.png",
         storyData: {
           storyTitle: "Ensimmäinen työpäivä",
           finnishLines: splitByBr(story4Finnish),
@@ -1005,7 +1005,7 @@ Leffan jälkee Luca menee nukkuu. <br>
         
       },
       {name: "Yksin kotona",
-        illustration: "/horizontal_illustration.png",
+        illustration: "/image5.png",
         storyData: {
           storyTitle: "Yksin kotona",
           finnishLines: splitByBr(story5Finnish),
