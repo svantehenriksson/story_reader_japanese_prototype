@@ -280,7 +280,7 @@ Jarkko: Hybridityö. <br>
 Luca: Ahaa. <br>
 Jarkko: Minu-lla on ensimmäinen työ sinu-lle. <br>
 Luca: Mikä työ? <br>
-Jarkko: Pilvi-integraatio. Asiakkaa-lle Ruoholahde-ssa. <br>
+Jarkko: Tekoälyprojekti. Asiakkaa-lle Ruoholahde-ssa. <br>
 Luca: Miten pääse-n Ruoholaht-een? <br>
 Jarkko: Ota raitiovaunu. Tai yrityk-sen sähköpyörä. Siinä on talvirenka-at. <br>
 `;
@@ -301,9 +301,9 @@ Jarkko: Hybrid work. <br>
 Luca: Aha. <br>
 Jarkko: I have your first task. <br>
 Luca: What task? <br>
-Jarkko: Cloud integration. For a client in Ruoholahti. <br>
+Jarkko: An artificial intelligence project. For a client in Ruoholahti. <br>
 Luca: How do I get to Ruoholahti? <br>
-Jarkko: Take the tram. Or the company e-bike. It has winter tires. <br>
+Jarkko: Take the tram. Or the company's electric bike. It has winter tires. <br>
 `;
 
 const story4SpokenFinnish = `
@@ -322,9 +322,9 @@ Jarkko: Hybridityö. <br>
 Luca: Ahaa. <br>
 Jarkko: Mu-l on eka duuni su-lle. <br>
 Luca: Mikä duuni? <br>
-Jarkko: Pilvi-integraatio. Asiakkaa-l Ruoholahde-ssa. <br>
+Jarkko: Tekoälyprojekti. Asiakkaa-l Ruoholahde-ssa. <br>
 Luca: Miten pääse-n Ruoholaht-ee? <br>
-Jarkko: Ota ratikka. Tai firma-n sähköpyörä. Sii-n on talvirenka-at. <br>
+Jarkko: Ota ratikka. Tai firma-n sähköpyörä. Siin on talvirenka-at. <br>
 `;
 
 const story5Finnish = `
@@ -841,7 +841,15 @@ Leffan jälkee Luca menee nukkuu. <br>
            [0, [1, 2], [3, 4], [5, 6], 7],
            [[0, 1], [2, 3], [4, 5], [6, 7]],
            [[0, 1], [2, 3], [4, 5], 6],
-           [0, 1, 2, 3, 4, [5, 6]]
+           [0, 1, 2, 3, 4, [5, 6]],
+           [0, 1],
+           [0, 1],
+           [0, [1, 2], 3, 4, 5, [6, 7]],
+           [0, 1, 2],
+           [0, 1, [2, 3], [4,5]],
+           [0, 1, [2, 3], [4,5]],
+           [0, 1, 2, 3, [4, 5], 6, 7, 8, 9, [10, 11]]
+
     
     
     
@@ -857,16 +865,53 @@ Leffan jälkee Luca menee nukkuu. <br>
             [0, [1, 5], [2, 3], 4, [6, 7]],
             [[0, 1], 2, 3, [4, 5, 6]],
             [[0, 1], 2, [3, 4, 5], 6],
-            [0, 6, 2, 3, 4, 5]
+            [0, 6, 2, 3, 4, 5],
+            [0, 1],
+            [0, 1],
+            [0, 1, 2, 4, 5, 3],
+            [0, 1, 2],
+            [0, [1, 2, 3, 4], [5, 6, 7], [8, 9]],
+            [0, 1, [3, 4], [5, 6]],
+            [0, 1, [2, 3], 4, [5, 6], [7, 8], 9, 10, [11, 12]]
 
           ],
           grammarNotes: [
             [],
             [],
+            ['kätellä = to shake hands. In Finnish shake hands combines into one word, approximately "handing"',
+              <br/>,
+              'Minä kättelen = I shake hands',
+              'Sinä kättelet = you shake hands',
+              'Hän kättelee = he/she shakes hands',
+              'Me kättelemme = we shake hands',
+              'Te kättelette = you all shake hands',
+              'He kättelevät = they shake hands'
+            ],
+            ['You can say either olen or minä olen, both mean I am.',
+              'When introducing oneself, it is common to add the word "minä".',
+              <br/>,
+              'Minä olen = I am',
+              'Sinä olet = you are',
+              'Hän on = he/she is',
+              'Me olemme = we are',
+              'Te olette = you all are',
+              'He ovat = they are',
+              <br/>,
+              'It is good to pay a lot of attention to the different forms and uses of olla.',
+              'Most commonly olla = to be. But olla is used also in some other contexts.',
+              <br/>,
+              '"olla" is also used for "have", depending on the context. There is no separate word for "have".',
+              <br/>,
+              'For example "I have a coffee" is "Minulla on kahvi".',
+              'Here you have to add the -lla (which usually means "on" in English). "Minä olen kahvi" would mean "I am coffee", and "Minä on kahvi" is incorrect.',
+              <br/>,
+              'And in the past tense form "I have done something" is "Olen tehnyt jotain".',
+              'Or "I have not done anything" is "En ole tehnyt mitään".',
+            ],
             [],
-            [],
-            [],
-            [],
+            ['haluta = to want, halua-t = you want, halua-t-ko = do you want.',
+              <br/>,
+              '-ko as and ending turns a word into a question.'],
             [],
             ['Minä-kin = I too. Notice the word order difference',
             'In English you could also say "I too will have coffee", but it is not as common.',
@@ -906,8 +951,16 @@ Leffan jälkee Luca menee nukkuu. <br>
             ],
             [],
             [],
+            ['-lla = on, with normally. But when you have something you say "minu-lla on". ',
+              <br/>,
+              'olla = to be, have, depending on the context. There is no separate word for "have".'
+            ],
             [],
-            [],
+            ['teko = made up, artificial, äly = intelligence, projekti = project, tekoäly = artificial intelligence, tekoälyprojekti = an artificial intelligence project. In Finnish words are often written together like this.',
+              '-lle most commonly stands for "to" or "onto". Example: laita kahvi pöydälle = put the coffee on the table. (pöytä = table)',
+              'But just like prepositions like "for" in English are multi-use, so are Finnish endings.',
+              'So something done for something will use the -lle ending.'
+            ],
             [],
             [],
             [],
@@ -915,9 +968,14 @@ Leffan jälkee Luca menee nukkuu. <br>
             []
           ],
           quizData: [
-            { question: 'Mikä on Jarkkon nimi?', options: ['Pomo', 'Jarkko', 'Luca', 'Aino'], answer: 'Jarkko' },
-            { question: 'Mikä on Luca työ?', options: ['Pilvi-integraatio', 'Kahvi', 'Hissi', 'Vaatekauppa'], answer: 'Pilvi-integraatio' },
-            { question: 'Miten pääsee Ruoholahteen?', options: ['Raitiovaunulla', 'Sähköpyörällä', 'Raitiovaunulla ja sähköpyörällä', 'Ei pääse'], answer: 'Raitiovaunulla ja sähköpyörällä' }
+            { question: 'Which of the following means "do you want"?', options: ['ottaa', 'otatko', 'haluaa', 'haluatko'], answer: 'haluatko' },
+            { question: 'How do you say "me too" or "I too"?', options: ['minäkö', 'minä', 'minäkin', 'minässä'], answer: 'minäkin' },
+            { question: 'How do you say "the men"? Not "men" in general.', options: ['miehet', 'miehiä', 'naiset', 'naisia'], answer: 'miehet' },
+            { question: 'How do you say "people"? As in many people in general, not "the people"', options: ['miehet', 'miehiä', 'ihmiset', 'ihmisiä'], answer: 'ihmisiä' },
+            { question: 'Mitä miehet ottivat automaatista?', options: ['teetä', 'kahvia', 'olutta', 'vettä'], answer: 'kahvia' },
+            { question: 'Kuinka paljon ihmisiä oli toimistolla?', options: ['paljon', 'tosi paljon', 'tosi vähän', 'ei yhtään'], answer: 'tosi vähän' },
+            { question: 'Mikä päivä oli? (which weekday was it?)', options: ['maanantai', 'tiistai', 'keskiviikko', 'torstai'], answer: 'maanantai' }
+
           ]
         }
       },
