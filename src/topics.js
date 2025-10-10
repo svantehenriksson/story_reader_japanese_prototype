@@ -267,22 +267,22 @@ const splitByBr = (storyText) => {
   const story4Finnish = `
 Pomo: Tervetuloa! <br>
 Luca: Kiitos. <br>
-Pomo ja Luca kättelevät. <br>
-Pomo: Minä olen Jarkko. <br>
-Luca: Minä olen Luca. <br>
-Jarkko: Haluatko kahvia? <br>
+Pomo ja Luca kättele-vät. <br>
+Pomo: Minä ole-n Jarkko. <br>
+Luca: Minä ole-n Luca. <br>
+Jarkko: Halua-t-ko kahvi-a? <br>
 Luca: Kyllä, kiitos. <br>
-Jarkko: Minäkin otan kahvia. Maanantaiaamu. <br>
-Miehet ottavat kahvia automaatista. <br>
-Automaatista lähtee kova ääni: surrrr. <br>
-Luca: Täällä on tosi vähän ihmisiä. <br>
+Jarkko: Minä-kin ota-n kahvi-a. Maanantaiaamu. <br>
+Mie-het otta-vat kahvi-a automaati-sta. <br>
+Automaati-sta lähte-e kova ääni: surrrr. <br>
+Luca: Täällä on tosi vähän ihmi-siä. <br>
 Jarkko: Hybridityö. <br>
 Luca: Ahaa. <br>
-Jarkko: Minulla on ensimmäinen työ sinulle. <br>
+Jarkko: Minu-lla on ensimmäinen työ sinu-lle. <br>
 Luca: Mikä työ? <br>
-Jarkko: Pilvi-integraatio. Asiakkaalle Ruoholahdessa. <br>
-Luca: Miten pääsen Ruoholahteen? <br>
-Jarkko: Ota raitiovaunu. Tai yrityksen sähköpyörä. Siinä on talvirenkaat. <br>
+Jarkko: Pilvi-integraatio. Asiakkaa-lle Ruoholahde-ssa. <br>
+Luca: Miten pääse-n Ruoholaht-een? <br>
+Jarkko: Ota raitiovaunu. Tai yrityk-sen sähköpyörä. Siinä on talvirenka-at. <br>
 `;
 
 const story4English = `
@@ -293,9 +293,9 @@ Boss: I'm Jarkko. <br>
 Luca: I'm Luca. <br>
 Jarkko: Do you want coffee? <br>
 Luca: Yes, please. <br>
-Jarkko: I'll have coffee too. Monday morning. <br>
+Jarkko: I will have coffee too. Monday morning. <br>
 The men take coffee from the machine. <br>
-The machine makes a loud sound: surrrr. <br>
+The machine makes a loud sound: brrrr. <br>
 Luca: There are very few people here. <br>
 Jarkko: Hybrid work. <br>
 Luca: Aha. <br>
@@ -309,22 +309,22 @@ Jarkko: Take the tram. Or the company e-bike. It has winter tires. <br>
 const story4SpokenFinnish = `
 Pomo: Tervetuloo! <br>
 Luca: Kiitos. <br>
-Pomo ja Luca kättelee. <br>
-Pomo: Mä oon Jarkko. <br>
-Luca: Mä oon Luca. <br>
-Jarkko: Haluuks kahvii? <br>
+Pomo ja Luca kättel-ee. <br>
+Pomo: Mä oo-n Jarkko. <br>
+Luca: Mä oo-n Luca. <br>
+Jarkko: Halu-u-ks kahvi-i? <br>
 Luca: Joo, kiitos. <br>
-Jarkko: Mäkin otan kahvii. Maanantaiaamu. <br>
-Miehet ottaa kahvii automaatist. <br>
-Automaatist lähtee kova ääni: surrrr. <br>
-Luca: Täl on tosi vähän ihmisiä. <br>
+Jarkko: Mä-kin ota-n kahvi-i. Maanantaiaamu. <br>
+Miehe-t otta-a kahvi-i automaati-st. <br>
+Automaati-st lähte-e kova ääni: surrrr. <br>
+Luca: Tääl on tosi vähän ihmi-sii. <br>
 Jarkko: Hybridityö. <br>
 Luca: Ahaa. <br>
-Jarkko: Mul on eka duuni sulle. <br>
-Luca: MIkä duuni? <br>
-Jarkko: Pilvi-integraatio. Asiakkaal Ruoholahdes. <br>
-Luca: Miten pääsen Ruoholahtee? <br>
-Jarkko: Ota ratikka. Tai firman sähköpyörä. Siin on talvirenkaat. <br>
+Jarkko: Mu-l on eka duuni su-lle. <br>
+Luca: Mikä duuni? <br>
+Jarkko: Pilvi-integraatio. Asiakkaa-l Ruoholahde-ssa. <br>
+Luca: Miten pääse-n Ruoholaht-ee? <br>
+Jarkko: Ota ratikka. Tai firma-n sähköpyörä. Sii-n on talvirenka-at. <br>
 `;
 
 const story5Finnish = `
@@ -830,8 +830,90 @@ Leffan jälkee Luca menee nukkuu. <br>
           spokenLines: splitByBr(story4SpokenFinnish),
 
           FinnishEndingsIndex: extractFinnishEndingsIndex(story4Finnish),
-          FinnishTranslationIndex: [],
-          EnglishTranslationIndex: [],
+          FinnishTranslationIndex: [
+           [0, 1],
+           [0, 1],
+           [0, 1, 2, [3,4]],
+           [0, [1, 2, 3], 4],
+           [0, [1, 2, 3], 4],    
+           [0, [1, 2, 3], [4,5]],
+           [0, 1, 2],
+           [0, [1, 2], [3, 4], [5, 6], 7],
+           [[0, 1], [2, 3], [4, 5], [6, 7]],
+           [[0, 1], [2, 3], [4, 5], 6],
+           [0, 1, 2, 3, 4, [5, 6]]
+    
+    
+    
+          ],
+          EnglishTranslationIndex: [
+            [0, 1],
+            [0, 1],
+            [[0, 1], 2, 3, [4,5]],
+            [0, 1, 2],    
+            [0, 1, 2],    
+            [0, [1, 2, 3], 4],
+            [0, 1, 2],    
+            [0, [1, 5], [2, 3], 4, [6, 7]],
+            [[0, 1], 2, 3, [4, 5, 6]],
+            [[0, 1], 2, [3, 4, 5], 6],
+            [0, 6, 2, 3, 4, 5]
+
+          ],
+          grammarNotes: [
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            ['Minä-kin = I too. Notice the word order difference',
+            'In English you could also say "I too will have coffee", but it is not as common.',
+              <br/>,
+              'ottaa = to take, minä otan = I take',
+              <br/>,
+              'There is technically also a future form of I will take in Finnish: Tulen ottamaan,',
+              'but that is not common and would usually only be used if specifying something further in the future.',
+            ],
+            ['Mie-het = the men, men in general would be miehiä',
+              <br/>,
+              '-sta means from. automaatista = from the machine.',
+              <br/>,
+              'ottaa = to take',
+              <br/>,
+              'Minä otan = I take',
+              'Sinä otat = you take',
+              'Hän ottaa = he/she takes',
+              'Me otamme = we take',
+              'Te otatte = you all take',
+              'He ottavat = they take'
+            ],
+            ['lähteä = to leave, lähtee = leaves.',
+              'In Finnish we say that a sound leaves (from) something, which while technically correct in English, is not common or how people speak.',
+              <br/>,
+              'An almost literal translation "From the machine leaves a loud sound" is grammatically incorrect in English, but could be used in a poetic style.',
+              <br/>,
+              'Words describing sounds in Finnish like "surrrr" for a vibrating buzz are often quite different from the English versions.',
+              'For example dog barks are written as "hau hau" in Finnish and "woof woof" in English.',
+              '"Pam" is used for "bang" etc.'
+            ],
+            ['Translating literally to "Here are very few people" is borderline correct in English, but bad style.',
+              'The word "there" in "There are very few people here" does not have a counterpart in the Finnish version.',
+              <br/>,
+              'tosi vähän = very little / very few.',
+              'This could also be said more formally as "todella vähän" or "erittäin vähän".',
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+          ],
           quizData: [
             { question: 'Mikä on Jarkkon nimi?', options: ['Pomo', 'Jarkko', 'Luca', 'Aino'], answer: 'Jarkko' },
             { question: 'Mikä on Luca työ?', options: ['Pilvi-integraatio', 'Kahvi', 'Hissi', 'Vaatekauppa'], answer: 'Pilvi-integraatio' },
