@@ -80,7 +80,7 @@ const Quiz = ({ goBack, quizData }) => {
       {showResult ? (
         <div className="result">
           <p>Sait {score} / {quizData.length} oikein!</p>
-          <button onClick={goBack}>Takaisin tarinaan</button>
+          <button className="back-to-story-button" onClick={goBack}>Takaisin tarinaan - Back to Story</button>
         </div>
       ) : (
         <div className="question-card">

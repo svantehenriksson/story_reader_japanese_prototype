@@ -7,9 +7,13 @@ import { topics } from './topics';
 function App() {
   const [view, setView] = useState('story'); // 'story' or 'quiz'
   const [topicIndex, setTopicIndex] = useState(0);
+  const [resumeAtLastLine, setResumeAtLastLine] = useState(false);
 
   const goToQuiz = () => setView('quiz');
-  const goBack = () => setView('story');
+  const goBack = () => {
+    setResumeAtLastLine(true);
+    setView('story');
+  };
 
   const handleTopicSelect = (index) => {
     setTopicIndex(index);
@@ -27,6 +31,8 @@ function App() {
           topics={topics}
           handleTopicSelect={handleTopicSelect}
           topicIndex={topicIndex}
+          resumeAtLastLine={resumeAtLastLine}
+          onResumeHandled={() => setResumeAtLastLine(false)}
         />
       )}
       {view === 'quiz' && <Quiz goBack={goBack} quizData={currentTopic.quizData} />}

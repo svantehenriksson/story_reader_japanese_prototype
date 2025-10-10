@@ -14,7 +14,7 @@ import { FinnishTranslationIndex, EnglishTranslationIndex, FinnishEndingsIndex, 
 import { topics } from './topics';
 
 
-const StoryReader = ({ goToQuiz, topic, topics, handleTopicSelect, topicIndex: currentTopicIndex }) => {
+const StoryReader = ({ goToQuiz, topic, topics, handleTopicSelect, topicIndex: currentTopicIndex, resumeAtLastLine, onResumeHandled }) => {
   const { storyTitle, finnishLines, englishLines, spokenLines, FinnishTranslationIndex, EnglishTranslationIndex, FinnishEndingsIndex, grammarNotes } = topic.storyData;
 
   console.log('grammarNotes: ', grammarNotes);  
@@ -28,6 +28,15 @@ const StoryReader = ({ goToQuiz, topic, topics, handleTopicSelect, topicIndex: c
   const [showTopicMenu, setShowTopicMenu] = useState(false);
 
   const isPlayingRef = useRef(false);
+
+  // If asked to resume at last line (from quiz), jump once and clear flag
+  useEffect(() => {
+    if (resumeAtLastLine) {
+      const lastIdx = (finnishLines?.length || 1) - 1;
+      setLineIndex(Math.max(0, lastIdx));
+      onResumeHandled && onResumeHandled();
+    }
+  }, [resumeAtLastLine, finnishLines, onResumeHandled]);
 
   /* The following section is for debugging purposes */
   useEffect(() => {

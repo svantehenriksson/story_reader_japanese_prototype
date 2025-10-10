@@ -966,7 +966,8 @@ Leffan jälkee Luca menee nukkuu. <br>
             [],
             [],
             []
-          ],
+          ]
+        },
           quizData: [
             { question: 'Which of the following means "do you want"?', options: ['ottaa', 'otatko', 'haluaa', 'haluatko'], answer: 'haluatko' },
             { question: 'How do you say "me too" or "I too"?', options: ['minäkö', 'minä', 'minäkin', 'minässä'], answer: 'minäkin' },
@@ -977,7 +978,7 @@ Leffan jälkee Luca menee nukkuu. <br>
             { question: 'Mikä päivä oli? (which weekday was it?)', options: ['maanantai', 'tiistai', 'keskiviikko', 'torstai'], answer: 'maanantai' }
 
           ]
-        }
+        
       },
       {name: "Yksin kotona",
         illustration: "/horizontal_illustration.png",
