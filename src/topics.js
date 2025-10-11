@@ -328,21 +328,22 @@ Jarkko: Ota ratikka. Tai firma-n sähköpyörä. Siin on talvirenka-at. <br>
 `;
 
 const story5Finnish = `
-Töiden jälkeen Luca on yksin kotona. <br>
-Luca on keittiössä. <br>
-Luca katsoo kaappiin. <br>
-Kaapissa on teetä ja kahvia. <br>
-Kaapissa on myös näkkileipää. <br>
-Luca katsoo jääkaappiin. <br>
-Jääkaapissa on maitoa ja voita. <br>
-Maito on vanhaa. <br>
-Luca keittää kupin teetä. <br>
-Luca laittaa voita näkkileivälle. <br>
-Näkkileipä maistuu vähän oudolta. <br>
-Lämmin tee maistuu hyvältä. <br>
-Luca selaa sosiaalista mediaa. <br>
-Teen jälkeen Luca katsoo elokuvaa. <br>
-Elokuvan jälkeen Luca menee nukkumaan. <br>
+Töi-den jälkeen Luca on yksin kotona. <br>
+Luca on keittiö-ssä. <br>
+Luca katso-o kaappi-in. <br>
+Kaapi-ssa on tee-tä ja kahvi-a. <br>
+Kaapi-ssa on myös näkkileipä-ä. <br>
+Luca katso-o jääkaappi-in. <br>
+Jääkaapi-ssa on maito-a ja voi-ta. <br>
+Maito on vanha-a. <br>
+Onneksi on maitojauhetta <br>
+Luca keittää kupi-n tee-tä. <br>
+Luca laittaa voi-ta näkkileiväl-le. <br>
+Näkkileipä maistu-u vähän oudo-lta. <br>
+Lämmin tee maistu-u hyvä-ltä. <br>
+Luca selaa sosiaalis-ta media-a. <br>
+Tee-n jälkeen Luca katso-o elokuva-a. <br>
+Elokuva-n jälkeen Luca men-ee nukku-maan. <br>
 `;
 
 const story5English = `
@@ -350,10 +351,11 @@ After work, Luca is home alone. <br>
 Luca is in the kitchen. <br>
 Luca looks in the cupboard. <br>
 There is tea and coffee in the cupboard. <br>
-There is also crispbread. <br>
+There is also crispbread in the cupboard. <br>
 Luca looks in the fridge. <br>
 There is milk and butter in the fridge. <br>
 The milk is old. <br>
+Luckily there is milk powder. <br>
 Luca makes a cup of tea. <br>
 Luca puts butter on the crispbread. <br>
 The crispbread tastes a bit strange. <br>
@@ -364,21 +366,22 @@ After the movie, Luca goes to sleep. <br>
 `;
 
 const story5SpokenFinnish = `
-Töiden jälkee Luca on yksin kotona. <br>
-Luca on keittiös. <br>
-Luca kattoo kaappiin. <br>
-Kaapis on teetä ja kahvii. <br>
-Kaapis on kans näkkileipää. <br>
-Luca kattoo jääkaappiin. <br>
-Jääkaapis on maitoo ja voita. <br>
-Maito on vanhaa. <br>
-Luca keittää kupin teetä. <br>
-Luca laittaa voita näkkileiväl. <br>
-Näkkileipä maistuu vähä oudolt. <br>
-Lämmin tee maistuu hyvält. <br>
+Töide-n jälkeen Luca on yksin kotona. <br>
+Luca on keittiö-s. <br>
+Luca katto-o kaappi-in. <br>
+Kaapi-s on tee-tä ja kahvi-i. <br>
+Kaapi-s on kans näkkileipä-ä. <br>
+Luca katto-o jääkaappi-in. <br>
+Jääkaapi-s on maito-o ja voi-ta. <br>
+Maito on vanha-a. <br>
+Onneks on maitojauhetta. <br>
+Luca keittää kupi-n tee-tä. <br>
+Luca laittaa voi-ta näkkileivä-l. <br>
+Näkkileipä maistu-u vähä oudo-lt. <br>
+Lämmin tee maistu-u hyvä-lt. <br>
 Luca selaa somee. <br>
-Teen jälkee Luca kattoo leffaa. <br>
-Leffan jälkee Luca menee nukkuu. <br>
+Tee-n jälkeen Luca katt-oo leffa-a. <br>
+Leffa-n jälkeen Luca mene-e nukku-u. <br>
 `;
 
 
@@ -1083,12 +1086,61 @@ Leffan jälkee Luca menee nukkuu. <br>
           spokenLines: splitByBr(story5SpokenFinnish),
 
           FinnishEndingsIndex: extractFinnishEndingsIndex(story5Finnish),
-          FinnishTranslationIndex: [],
-          EnglishTranslationIndex: [],
+          FinnishTranslationIndex: [
+            [[0, 1], 2, 3, 4, 5, 6], // Töi-den jälkeen Luca on yksin kotona.
+            [0, 1, [2, 3]], // Luca on keittiö-ssä.
+            [0, [1, 2], [3, 4]], // Luca katso-o kaappi-in.
+            [[0, 1], 2, [3, 4], 5, [6, 7]], // Kaapi-ssa on tee-tä ja kahvi-a.
+            [[0, 1], 2, 3, [4, 5]], // Kaapi-ssa on myös näkkileipä-ä.
+            [0, [1, 2], [3, 4]], // Luca katso-o jääkaappi-in.
+            [[0, 1], 2, [3, 4], 5, [6, 7]], // Jääkaapi-ssa on maito-a ja voi-ta.
+            [0, 1, [2, 3]], // Maito on vanha-a.
+            [0, 1, [2, 3]], // Onneksi on maitojauhet-ta
+            [0, 1, [2, 3], [4, 5]], // Luca keittää kupi-n tee-tä.
+            [0, 1, [2, 3], [4, 5]], // Luca laittaa voi-ta näkkileiväl-le.
+            [0, [1, 2], 3, [4, 5]], // Näkkileipä maistu-u vähän oudo-lta.
+            [0, 1, [2, 3], [4, 5]], // Lämmin tee maistu-u hyvä-ltä.
+            [0, 1, [2, 3], [4, 5]], // Luca selaa sosiaalis-ta media-a.
+            [[0, 1], 2, 3, [4, 5], [6, 7]], // Tee-n jälkeen Luca katso-o elokuva-a.
+            [[0, 1], 2, 3, [4, 5], [6, 7]] // Elokuva-n jälkeen Luca men-ee nukku-umaan.
+          ],
+          EnglishTranslationIndex: [
+            [1, 0, 2, 3, 5, 4], // After work, Luca is home alone.
+            [0, 1, [2, 3, 4]], // Luca is in the kitchen.
+            [0, 1, [2, 3, 4]], // Luca looks in the cupboard.
+            [[5, 6, 7], [0, 1], 2, 3, 4], // There is tea and coffee in the cupboard.
+            [[5, 6, 7], [0, 1], 2, 3, 4], // There is also crispbread in the cupboard.
+            [0, 1, [2, 3, 4]], // Luca looks in the fridge.
+            [[5, 6, 7], [0, 1], 2, 3, 4], // There is milk and butter in the fridge.
+            [[0, 1], 2, 3], // The milk is old.
+            [0, [1, 2], [3, 4]], // Luckily there is milk powder.
+            [0, 1, [2, 3], [4, 5]], // Luca makes a cup of tea.
+            [0, 1, 2, [3, 4, 5]], // Luca puts butter on the crispbread.
+            [[0, 1], 2, [3, 4], 5], // The crispbread tastes a bit strange.
+            [1, [0, 2], 3, 4], // The warm tea tastes good.
+            [0, [1, 2], 3, 4], // Luca scrolls through social media.
+            [[1, 2], 0, 3, 4, [5, 6]], // After the tea, Luca watches a movie.
+            [[1, 2], 0, 3, 4, [5, 6]] // After the movie, Luca goes to sleep.
+          ],
+
+          grammarNotes: [
+            ['First page, work in progress'],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+
+          ]
+
+        },
           quizData: [
             { question: 'Mikä on Luca työ?', options: ['Pilvi-integraatio', 'Kahvi', 'Hissi', 'Vaatekauppa'], answer: 'Pilvi-integraatio' },
             { question: 'Miten pääsee Ruoholahteen?', options: ['Raitiovaunulla', 'Sähköpyörällä', 'Raitiovaunulla ja sähköpyörällä', 'Ei pääse'], answer: 'Raitiovaunulla ja sähköpyörällä' }
           ]
         }
-      }
+      
   ]; 
