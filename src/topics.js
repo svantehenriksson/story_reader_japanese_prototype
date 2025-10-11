@@ -137,11 +137,11 @@ const splitByBr = (storyText) => {
   Nainen sano-o: "Moi." <br> 
   Nainen hymyil-ee. <br> 
   Luca hymyil-ee myös. <br> 
-  Luca kysy-y: "Mikä sinun nime-si on?" <br> 
+  Luca kysy-y: "Mikä sinu-n nime-si on?" <br> 
   Nainen sano-o: "Aino." <br> 
-  Luca: "Minun nimi on Luca." <br> 
-  Luca: "Asun toise-ssa kerrokse-ssa." <br> 
-  Aino: "Asun yläkerra-ssa-si." <br> 
+  Luca: "Minu-n nimi on Luca." <br> 
+  Luca: "Asu-n toise-ssa kerrokse-ssa." <br> 
+  Aino: "Asu-n yläkerra-ssa-si." <br> 
   Hissi pysähty-y. <br> 
   Ding! <br> 
   Luca astu-u ulos.`;
@@ -177,11 +177,11 @@ const splitByBr = (storyText) => {
   Nainen sano-o: "Moi." <br> 
   Nainen hymyil-ee. <br> 
   Luca hymyil-ee myös. <br> 
-  Luca kysy-y: "Mikä sinun nime-si on?" <br> 
+  Luca kysy-y: "Mikä su-n nime-s on?" <br> 
   Nainen sano-o: "Aino." <br> 
-  Luca: "Mun nimi on Luca." <br> 
-  Luca: "Asun toka-s kerrokse-s." <br> 
-  Aino: "Asun yläkerra-ssa-s." <br> 
+  Luca: "Mu-n nimi on Luca." <br> 
+  Luca: "Asu-n toka-s kerrokse-s." <br> 
+  Aino: "Asu-n yläkerra-ssa-s." <br> 
   Hissi pysähty-y. <br> 
   Ding! <br> 
   Luca astu-u ulos.`;
@@ -562,15 +562,23 @@ Leffan jälkee Luca menee nukkuu. <br>
           'Te hymyilette = you all smile',
           'He hymyilevät = they smile'
         ],
-        []
+        ['If you want one grammar takeaway from this chapter, pay attention to the forms that end with -a, -ä, -ta, -tä, -tta or -ttä. They are very common in Finnish.',
+          <br/>,
+          'We had several examples like kahvi-a, bussi-a, englanti-a, lun-ta (from lumi, where the word changed more).',
+          <br/>,
+          'We also had similar examples for adjectives: kallis-ta, outo-a, kaunis-ta.'
+        ]
 
       ]
       },
       quizData: [
-        { question: 'Missä Luca on?', options: ['Kotona', 'Lentokentällä', 'Bussissa', 'Hississä'], answer: 'Lentokentällä' },
+        { question: 'How do you say "Finland" in Finnish?', options: ['Suomi', 'Ruotsi', 'Venäjä', 'Finland'], answer: 'Suomi' },
+        { question: 'What is "coffee" in Finnish?', options: ['lumi', 'bussi', 'kahvi', 'kohvi'], answer: 'kahvi' },
+        { question: 'What is "bus" in Finnish?', options: ['auto', 'bussi', 'vene', 'lumi'], answer: 'bussi' },
+        { question: 'What is "beautiful" in Finnish?', options: ['lumi', 'lunta', 'kaunis', 'kallis'], answer: 'kaunis' },
+        { question: 'Missä Luca on?', options: ['lentokentällä', 'Italiassa', 'autossa', 'veneessä'], answer: 'lentokentällä' },
         { question: 'Miksi Luca juo kahvia?', options: ['Se on halpaa', 'Hän on janoinen', 'Hän on väsynyt', 'Hän pitää mausta'], answer: 'Hän on väsynyt' },
-        { question: 'Puhuuko bussinkuljettaja englantia?', options: ['Kyllä', 'Vähän', 'Ei', 'Vain espanjaa'], answer: 'Ei' },
-        { question: 'Mikä on sää ulkona?', options: ['On aurinkoista', 'Sataa vettä', 'On sumuista', 'Sataa lunta'], answer: 'Sataa lunta' }
+        { question: 'Puhuuko bussinkuljettaja englantia?', options: ['Kyllä', 'Paljon', 'Ei', 'Vain espanjaa'], answer: 'Ei' }
       ]
     },
     {
@@ -596,11 +604,11 @@ Leffan jälkee Luca menee nukkuu. <br>
             [0, [1, 2], 3], 
             [0, [1, 2]], 
             [0, [1, 2], 3], 
-            [0, [1, 2], 3, [4, 5, 6], 7], 
+            [0, [1, 2], 3, [4, 5], [6, 7], 8], 
             [0, [1, 2], 3], 
-            [0, 1, 2, 3, 4],
-            [0, 1, [2, 3, 4, 5]],
-            [0, 1, [2, 3, 4]], 
+            [0, [1, 2], 3, 4, 5],
+            [0, [1, 2], [3, 4, 5, 6]],
+            [0, [1, 2], [3, 4, 5]], 
             [0, [1, 2]], 
             [0], 
             [0, [1, 2], 3]
@@ -616,7 +624,7 @@ Leffan jälkee Luca menee nukkuu. <br>
             [[0, 1], 2, 3], 
             [[0, 1], 2], 
             [0, 1, [2, 3]], 
-            [0, 1, 2, [4, 5], 3], 
+            [0, 1, 2, 4, 5, 3], 
             [[0, 1], 2, 3], 
             [0, 1, 2, 3, 4], 
             [0, [1,2], [3, 4, 5, 6]], 
@@ -633,18 +641,30 @@ Leffan jälkee Luca menee nukkuu. <br>
             <br/>,
           'Minä seison = I stand',
           'Sinä seisot = you stand',
-          'Hän seisoo = he/she/it stands',
+          'Hän seisoo = he/she stands',
           'Me seisomme = we stand',
           'Te seisotte = you all stand',
           'He seisovat = they stand'
           ],
           ['In seiso-o the end -o refers to that he stands.'],
-          ['-ta in nais-ta refers to that she is the object of his look.'],
-          ['And now he is the object of her look, which causes -a to Luca-a.',
+          ['-ta in nais-ta refers to that she is the object of his look.',
+            'Same form as in many words in the previous chapter, like kahvi-a, bussi-a etc.'
+          ],
+          ['And now he is the object of her look, which adds the ending -a to Luca-a.',
             <br/>,
           'You can compare: Nainen katso-o Luca-a. with Luca katso-o nais-ta'
           ],
-          [],
+          ['sanoa = to say',
+            <br/>,
+            'Minä sanon = I say',
+            'Sinä sanot = you say',
+            'Hän sanoo = he/she says',
+            'Me sanomme = we say',
+            'Te sanotte = you all say',
+            'He sanovat = they say',
+            <br/>,
+            'puhua = to speak, sanoa = to say',
+          ],
           [],
           ['-ee in hymyil-ee means that she smiles.',
             <br/>,
@@ -657,14 +677,54 @@ Leffan jälkee Luca menee nukkuu. <br>
           'Te hymyilette = you all smile',
           'He hymyilevät = they smile'
         ],
-        []
+        [],
+        ['The ending -si refers to "your". nimi = name, nime-si = your name. (note how the word changes a bit)',
+          <br/>,
+          'The different endings for someone\'s name (nimi) are:',
+          <br/>,
+          '(minu-n) nime-ni = my name',
+          '(sinu-n) nime-si = your name',
+          '(häne-n) nime-nsä = his/her name',
+          '(meidä-n) nime-mme = our name',
+          '(teidä-n) nime-nne = you all\'s name/names',
+          '(heidä-n) nime-nsä = their name/names',
+          <br/>,
+          'Both "nimesi" and "sinun nimesi" mean your name, but in introduction it is common to add the pronoun.'
+        ],
+        [],
+        ['More formal would be "minun nime-ni", but "minun nimi" is also correct, and more casual.'],
+        ['Here is a typical example of two identical endings: toise-ssa kerrokse-ssa. (toinen = second, kerros = floor)',
+          <br/>,
+          'In Finnish, also the adjective changes, so when we say "on the second floor", we say "toise-ssa kerrokse-ssa".',
+          <br/>,
+          '-ssa actually means "in", not "on" so in Finnish you are "in a floor" not "on a floor".',
+          <br/>,
+          'kerros = floor, layer. So if you want to understand the logic of "in a floor" more deeply, it is in a way "in a layer" (of apartments).',
+        ],
+        ['yläkerta = upstairs. yläkerra-ssa-si has two endings, where -ssa means "in" and -si means "your".',
+          <br/>,
+          'In Finnish it is typical to add more than one ending to a word. Typically these would correspond to two prepositions in English, in this case "in your", but in English this particular sentence is written differently as "from you".'
+        ],
+        ['pysähtyä = to stop, pysähty-y refers to it (the elevator) stops'],
+        [],
+        ['Some grammar takeaways from this chapter: ',
+          <br/>,
+        'We had endings like -si corresponding to "your" in Finnish. (in the grammar notes you can also find endings for my, his/hers etc.)',
+        <br/>,
+        'We also had double endings for one word, like -ssa + -si (in your)',
+        <br/>,
+        'and the same ending -ssa duplicated for two words (toise-ssa kerrokse-ssa).'
+        ]
         ]
       },
       quizData: [
-        { question: 'Kenen kanssa Luca on hississä?', options: ['Ainon', 'Naisen', 'Kuljettajan', 'Yksin'], answer: 'Naisen' },
+        { question: 'What is "elevator" in Finnish?', options: ['bussi', 'hissi', 'kassi', 'pussi'], answer: 'hissi' },
+        { question: 'What is "name" in Finnish?', options: ['mini', 'nimi', 'nami', 'nainen'], answer: 'nimi' },
+        { question: 'What is "in the elevator" in Finnish?', options: ['bussissa', 'hississä', 'hissillä', 'hissi'], answer: 'hississä' },
+        { question: 'What is "your name" in Finnish?', options: ['nimeni', 'nimi', 'nimesi', 'nimemme'], answer: 'nimesi' },
+        { question: 'Missä Luca tapaa naisen?', options: ['bussissa', 'lentokentällä', 'hississä', 'yläkerrassa'], answer: 'hississä' },
         { question: 'Mikä naisen nimi on?', options: ['Aino', 'Anna', 'Luca', 'Sitä ei mainita'], answer: 'Aino' },
-        { question: 'Mitä Luca sanoo ensin?', options: ['"Moi"', '"Mikä sinun nimesi on?"', '"Hei."', '"Anteeksi"'], answer: '"Hei."' },
-        { question: 'Missä Aino asuu?', options: ['Lucan yläkerrassa', 'Lucan alakerrassa', 'Samassa kerroksessa', 'Sitä ei kerrota'], answer: 'Lucan yläkerrassa' }
+        { question: 'Missä Luca asuu?', options: ['Hotellissa', 'Ainon alakerrassa', 'Ainon yläkerrassa', 'Sitä ei kerrota'], answer: 'Ainon yläkerrassa' }
       ]
     },
     {
@@ -834,15 +894,25 @@ Leffan jälkee Luca menee nukkuu. <br>
             'Remember for example Luca katsoo = Luca looks, even though the basic form is katsoa'
           ],
           [],
-          []
+          ['A grammar takeaway for this chapter is the form ending with -n',
+            <br/>,
+            'The -n form is similar to the -a, -ä, -ta, -tä, -tta or -ttä form.',
+            <br/>,
+            'Both forms usually occur when A affects / performs an action / does something to B. But the -n form occurs when the action is somehow very complete and specific as in when Luca finds the black winter coat he is looking for: Luca löytää musta-n talvitaki-n. If you want to just say that he found a jacket, it would be Luca löytää taki-n.',
+          ]
 
     ]
         },
         quizData: [
-            { question: 'Miten sanotaan "I am hungry" suomeksi?', options: ['Minulla on nälkä', 'Olen nälkä', 'Minä syön nälkä', 'Minulla on syönyt'], answer: 'Minulla on nälkä' },
-            { question: 'Mitä orava teki kastanjalle?', options: ['Antoi sen Leolle', 'Piilotti sen puuhun', 'Varasti sen', 'Söi sen isän kanssa'], answer: 'Varasti sen' },
-            { question: 'Miksi isä ei syönyt soijamakkaraa?', options: ['Hän ei pidä siitä', 'Se oli loppu', 'Hän on allerginen soijalle', 'Hän on vegaani'], answer: 'Hän on allerginen soijalle' },
-            { question: 'Mitä tapahtui tarinan lopussa?', options: ['Leo sai uuden kastanjan', 'Perhe meni nukkumaan', 'Orava pieraisi', 'Isä grillasi lisää ruokaa'], answer: 'Orava pieraisi' }
+            { question: 'What is "cold" in Finnish', options: ['kuuma', 'lämmin', 'kylmä', 'jääkylmä'], answer: 'kylmä' },
+            { question: 'What is "coat" in Finnish', options: ['takki', 'tikki', 'punkki', 'hyttynen'], answer: 'takki' },
+            { question: 'What is "winter" in Finnish', options: ['kevät', 'kesä', 'syksy', 'talvi'], answer: 'talvi' },
+            { question: 'How do you say "Luca finds a coat" in Finnish', options: ['Luca etsii takkia', 'Luca löytää takin', 'Luca löytää talvi', 'Luca ostaa leggingsit'], answer: 'Luca löytää takin' },
+
+
+            { question: 'Miksi Luca meni vaatekauppaan?', options: ['Luca rakastaa shoppailua', 'Lucalla oli kylmä', 'Vahingossa', 'Luca etsi WC:tä'], answer: 'Lucalla oli kylmä' },
+            { question: 'Löysikö Luca talvitakin', options: ['Kyllä', 'Ei'], answer: 'Kyllä' },
+            { question: 'Minkä värisen pipon Luca osti?', options: ['valkoisen', 'sinisen', 'keltaisen', 'mustan'], answer: 'mustan' }
         ]
       },
       {name: "Ensimmäinen työpäivä",
