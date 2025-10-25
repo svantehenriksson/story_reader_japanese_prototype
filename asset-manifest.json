@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/story_reader_japanese_prototype/static/css/main.631bc9f5.css",
+    "main.js": "/story_reader_japanese_prototype/static/js/main.e752355c.js",
+    "static/js/453.efea8bd7.chunk.js": "/story_reader_japanese_prototype/static/js/453.efea8bd7.chunk.js",
+    "index.html": "/story_reader_japanese_prototype/index.html",
+    "main.631bc9f5.css.map": "/story_reader_japanese_prototype/static/css/main.631bc9f5.css.map",
+    "main.e752355c.js.map": "/story_reader_japanese_prototype/static/js/main.e752355c.js.map",
+    "453.efea8bd7.chunk.js.map": "/story_reader_japanese_prototype/static/js/453.efea8bd7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.631bc9f5.css",
+    "static/js/main.e752355c.js"
+  ]
+}
