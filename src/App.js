@@ -10,6 +10,12 @@ function App() {
   const [resumeAtLastLine, setResumeAtLastLine] = useState(false);
 
   const goToQuiz = () => setView('quiz');
+
+  const goToNextChapter = () => {
+    setTopicIndex(topicIndex + 1);
+    setView('story');
+  };
+
   const goBack = () => {
     setResumeAtLastLine(true);
     setView('story');
@@ -27,6 +33,7 @@ function App() {
       {view === 'story' && (
         <StoryReader
           goToQuiz={goToQuiz}
+          goToNextChapter={goToNextChapter}
           topic={currentTopic}
           topics={topics}
           handleTopicSelect={handleTopicSelect}

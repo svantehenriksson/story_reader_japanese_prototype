@@ -81,21 +81,7 @@ const splitByBr = (storyText) => {
   Yuki wa kirei da. <br> 
   Ruka wa hohoemu. <br> 
   Koko wa Finrando da.`;
-
-  const story1FakeEnglish = `
-  Luca asforhim airport at be. <br> 
-  Luca asforhim tired be. <br> 
-  Luca asforhim coffee (some) drink. <br> 
-  Coffee asforit expensive. <br> 
-  Coffee asforit a_bit strange be. <br> 
-  But coffee asforit function for stands. <br> 
-  Finns asforthem this (some) everyday drink? <br> 
-  Luca asforhim bus (some) searches is. <br>
-  Bus (it_subject) arrives. <br>
-  Driver asforhim nothing hedoesntsay. <br>
-  Outside at asforthere snow (it_subject) itfalling is
-`;
-
+  
   const story1English = `
   Luca is at the airport. <br> 
   Luca is tired. <br> 
@@ -159,17 +145,6 @@ const splitByBr = (storyText) => {
   Erebeetaa ga tomaru. <br> 
   Ding! <br> 
   Ruka wa oriru.`;
-
-  const story2FakeEnglish = `
-  Luca asforhim elevator in enter. <br>
-  Elevator in woman 's person (<-she's subject) be. <br>
-  Woman 's person asforher quiet -ly standing be. <br>
-  Luca also quiet -ly standing be. <br>
-  Luca asforhim woman 's person (<-she's object) look. <br>
-  Woman 's person asforher Luca (<-he's object) look. <br>
-  Luca asforhim "Hello" (<-that's a quote from him) say. <br>
-  Woman 's person asforher "Hi" (<-that's a quote from her) say. <br>
-  `;
   
   const story2English = `
   Luca goes into the elevator. <br> 
@@ -440,7 +415,6 @@ Koko wa Finrando da.`;
         storyTitle: "Luca saapuu Suomeen",
         finnishLines: splitByBr(story1Finnish),
         englishLines: splitByBr(story1English),
-        fakeEnglishLines: splitByBr(story1FakeEnglish),
         spokenLines: splitByBr(story1SpokenFinnish),
         //FinnishEndingsIndex: [
         //  [3], [], [3], [3], [4], [], [1, 3], [2, 4], [2], [4], [], [], [], [3], [2], [], [], [3], [2], []
@@ -532,7 +506,6 @@ Koko wa Finrando da.`;
       storyData: {
         storyTitle: "Luca hississä",
         finnishLines: splitByBr(story2Finnish),
-        fakeEnglishLines: splitByBr(story2FakeEnglish),
         englishLines: splitByBr(story2English),
         spokenLines: splitByBr(story2SpokenFinnish),
        /* FinnishEndingsIndex: [
@@ -890,24 +863,7 @@ Koko wa Finrando da.`;
               [[1, 2], 0, 3, 4, [5, 6]],
               [[1, 2], 0, 3, 4, [5, 6]]
             ],
-            grammarNotes: [
-              ['Shigoto = work, no ato = after, Ruka = Luca, wa = topic, hitori de = alone, ie = home, ni = at, iru = be.', 'no ato forms "after X"; hitori de "by oneself/alone." iru for animate existence.'], // Shigoto no ato, Ruka wa hitori de ie ni iru.
-              ['Ruka = Luca, wa = topic, daidokoro = kitchen, ni = in/at, iru = be.', 'Location with ni + iru (animate). Topic wa frames sentence.'], // Ruka wa daidokoro ni iru.
-              ['Ruka = Luca, wa = topic, todana = cupboard, o = object, miru = look at.', 'o marks direct object; plain non-past narrative present. Base: miru.'], //  Ruka wa todana o miru.
-              ['Todana = cupboard, ni = in, wa = topic, ocha = tea, to = and, kouhii = coffee, ga = subject, aru = exist (inanimate).', 'aru (inanimate existence); ga marks what exists; ni indicates location.'], // Todana ni wa ocha to kouhii ga aru.
-              ['Todana = cupboard, ni = in, wa = topic, kurisupupan = crispbread, mo = also, aru = exist.', 'mo adds "also"; same aru pattern for inanimate existence.'], // Todana ni wa kurisupupan mo aru.
-              ['Ruka = Luca, wa = topic, reizouko = fridge, o = object, miru = look at.', 'Parallel to todana line; repetition reinforces structure.'], // Ruka wa reizouko o miru.
-              ['Reizouko = fridge, ni = in, wa = topic, gyuunyuu = milk, to = and, bataa = butter, ga = subject, aru = exist.', 'Compound subject with to; aru for inanimate.'], // Reizouko ni wa gyuunyuu to bataa ga aru.
-              ['Gyuunyuu = milk, wa = topic, furui = old (i-adjective).', 'i-adjective predicates directly; wa sets milk as topic.'], // Gyuunyuu wa furui.
-              ['Saiwai = fortunately, miruku pawadaa = milk powder, ga = subject, aru = exist.', 'Adverbial sentence-initial "saiwai"; aru expresses availability.'], // Saiwai, miruku pawadaa ga aru.
-              ['Ruka = Luca, wa = topic, ippai = one cup, no = linker, ocha = tea, o = object, ireru = brew/pour.', 'Classifier + no + noun "a cup of …"; ireru used for making tea/coffee.'], // Ruka wa ippai no ocha o ireru.
-              ['Ruka = Luca, wa = topic, kurisupupan = crispbread, ni = on, bataa = butter, o = object, nuru = spread.', 'ni marks target/surface; nuru "to spread (butter etc.)."'], // Ruka wa kurisupupan ni bataa o nuru.
-              ['Kurisupupan = crispbread, wa = topic, chotto = a bit, hen = strange (na-adj), na = attributive, aji = taste, ga = subject, suru = do/feel.', 'X na aji (na-adj + aji) modifies "taste"; aji ga suru "tastes/has a flavor."'], // Kurisupupan wa chotto hen na aji ga suru.
-              ['Atatakai = warm (i-adj), ocha = tea, wa = topic, oishii = tasty (i-adj).', 'Topic-comment judgment; both i-adjectives.'], // Atatakai ocha wa oishii.
-              ['Ruka = Luca, wa = topic, SNS = social media, o = object, sukurooru suru = scroll (do).', 'Loan verb via suru; o marks content being scrolled.'], // Ruka wa SNS o sukurooru suru.
-              ['Ocha no ato = after tea, Ruka = Luca, wa = topic, eiga = movie, o = object, miru = watch.', 'no ato "after …"; plain non-past miru as scheduled/near-future narrative.'], // Ocha no ato, Ruka wa eiga o miru.
-              ['Eiga no ato = after the movie, Ruka = Luca, wa = topic, nemuru = sleep.', 'Plain non-past narrative result/action after previous event.'] // Eiga no ato, Ruka wa nemuru.
-            ]
+            grammarNotes: []
           },
           quizData: [
             { question: 'Ruka no shigoto wa nani?', options: ['kuroudo intēgureeshon', 'koohii', 'erebeetaa', 'fukuya'], answer: 'kuroudo intēgureeshon' },
@@ -916,23 +872,4 @@ Koko wa Finrando da.`;
         }
       
   ]; 
-
-  /*
-  Shigoto no ato, Ruka wa hitori de ie ni iru. <br>
-  Ruka wa daidokoro ni iru. <br>
-  Ruka wa todana o miru. <br>
-  Todana ni wa ocha to kouhii ga aru. <br>
-  Todana ni wa kurisupupan mo aru. <br>
-  Ruka wa reizouko o miru. <br>
-  Reizouko ni wa gyuunyuu to bataa ga aru. <br>
-  Gyuunyuu wa furui. <br>
-  Saiwai, miruku pawadaa ga aru. <br>
-  Ruka wa ippai no ocha o ireru. <br>
-  Ruka wa kurisupupan ni bataa o nuru. <br>
-  Kurisupupan wa chotto hen na aji ga suru. <br>
-  Atatakai ocha wa oishii. <br>
-  Ruka wa SNS o sukurooru suru. <br>
-  Ocha no ato, Ruka wa eiga o miru. <br>
-  Eiga no ato, Ruka wa nemuru. <br>
-  */
   
