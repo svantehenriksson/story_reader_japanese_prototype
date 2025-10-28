@@ -6,7 +6,8 @@ import './style.css';
 const StoryReader = ({ goToQuiz, goToNextChapter, topic, topics, handleTopicSelect, topicIndex: currentTopicIndex, resumeAtLastLine, onResumeHandled }) => {
   const { storyTitle, finnishLines, fakeEnglishLines, englishLines, spokenLines, FinnishTranslationIndex, EnglishTranslationIndex, FinnishEndingsIndex, grammarNotes } = topic.storyData;
 
- 
+  console.log('goToQuiz', goToQuiz, 'goToNextChapter', goToNextChapter, 'topic: ', topic, 'topics: ', topics, 'handleTopicSelect: ', handleTopicSelect, 'CURRENTtopicIndex: ', currentTopicIndex, 'resumeAtLastLine: ', resumeAtLastLine, 'onResumeHandled: ', onResumeHandled);
+  console.log('storyTitle: ', storyTitle, 'finnishLines: ', finnishLines, 'fakeEnglishLines: ', fakeEnglishLines, 'englishLines: ', englishLines, 'spokenLines: ', spokenLines, 'FinnishTranslationIndex: ', FinnishTranslationIndex, 'EnglishTranslationIndex: ', EnglishTranslationIndex, 'FinnishEndingsIndex: ', FinnishEndingsIndex, 'grammarNotes: ', grammarNotes);
 
   const [lineIndex, setLineIndex] = useState(0);
   const [hoveredWordIndex, setHoveredWordIndex] = useState(null);
