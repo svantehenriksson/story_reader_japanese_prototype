@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 import StoryReader from './StoryReader';
 import Quiz from './Quiz';
-import { topics } from './topics';
+import { topics } from './topics'; //Migrate to content/topics.js when classes, data cleaning etc ready
 
 function App() {
   const [view, setView] = useState('story'); // 'story' or 'quiz'

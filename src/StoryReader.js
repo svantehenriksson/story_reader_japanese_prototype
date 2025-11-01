@@ -50,11 +50,14 @@ const StoryReader = ({ goToQuiz, goToNextChapter, topic, topics, handleTopicSele
     setLineIndex(0); // Reset line index when changing topic
   }
 
-  const renderWords = (words, className, isFinnish = false) =>
-    words.map((word, idx) => {
+const handleClickBack = () => {
+  goToNextChapter();
+  setLineIndex(0);
+};
 
-
-      let isHighlighted = false;
+const renderWords = (words, className, isFinnish = false) =>
+  words.map((word, idx) => {
+    let isHighlighted = false;
 
       if (isFinnish && hoveredWordIndex != null) {
         const finGroups = FinnishTranslationIndex[lineIndex];
@@ -344,7 +347,7 @@ const StoryReader = ({ goToQuiz, goToNextChapter, topic, topics, handleTopicSele
     <button onClick={goToQuiz} className="next-button">
       ❓❓Quiz❓❓
     </button>
-    <button onClick={goToNextChapter} className="next-button">
+    <button onClick={handleClickBack} className="next-button">
       ➡️ Seuraava luku - Next chapter ➡️
     </button>
   </div>

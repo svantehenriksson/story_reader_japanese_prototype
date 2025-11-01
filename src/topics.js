@@ -85,15 +85,24 @@ const splitByBr = (storyText) => {
   const story1FakeEnglish = `
   Luca asforhim airport at be. <br> 
   Luca asforhim tired be. <br> 
-  Luca asforhim coffee (<-object) drink. <br> 
+  Luca asforhim coffee (<object) drink. <br> 
   Coffee asforit expensive. <br> 
   Coffee asforit a_bit strange be. <br> 
   But coffee asforit function for stands. <br> 
   Finns asforthem this (some) everyday drink? <br> 
   Luca asforhim bus (some) searches is. <br>
   Bus (it_subject) arrives. <br>
-  Driver asforhim nothing hedoesntsay. <br>
-  Outside at asforthere snow (it_subject) itfalling is
+  Driver (it_subject) English (object) notspeak. <br>
+  Driver asforhim nothing doesntsay. <br>
+  Luca asforhim "Hi." (quote) say. <br>
+  Driver asforhim nothing doesntsay. <br>
+  Outside at asforthere snow (it_subject) itfalling is <br>
+  Snow (it_subject) lots. <br>
+  Cold. <br>
+  Really cold. <br>
+  Snow (it_subject) beautiful be. <br>
+  Luca asforhim smile. <br>
+  This asforit Finland be.
 `;
 
   const story1English = `
