@@ -85,7 +85,7 @@ const splitByBr = (storyText) => {
   const story1FakeEnglish = `
   Luca asforhim airport at be. <br> 
   Luca asforhim tired be. <br> 
-  Luca asforhim coffee (some) drink. <br> 
+  Luca asforhim coffee (<-object) drink. <br> 
   Coffee asforit expensive. <br> 
   Coffee asforit a_bit strange be. <br> 
   But coffee asforit function for stands. <br> 
