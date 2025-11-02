@@ -177,7 +177,17 @@ const splitByBr = (storyText) => {
   Luca asforhim woman 's person (<-she's object) look. <br>
   Woman 's person asforher Luca (<-he's object) look. <br>
   Luca asforhim "Hello" (<-that's a quote from him) say. <br>
-  Woman 's person asforher "Hi" (<-that's a quote from her) say. <br>
+  Woman 's person asforher "Hi" (quote from her) say. <br>
+  Woman 's person asforher smile. <br>
+  Luca also smile. <br>
+  Luca asforhim "You 's name asforit what is (?) ?" (quote) ask. <br>
+  Woman 's person asforher "Aino" (quote) say. <br>
+  Luca: "I 's name asforit Luca is". <br>
+  Luca: "I asforme second in floor be". <br>
+  Aino: "I asforme you 's ***** <br>
+  Elevator (it_subject) stop. <br>
+  Ding! <br>
+  Luca asforhim get_off.
   `;
   
   const story2English = `
@@ -246,6 +256,32 @@ const splitByBr = (storyText) => {
   Tenin: Arigatou! Bai bai. <br>
   `;
   
+  const story3FakeEnglish = `
+  Luca asforhim cold <br>   
+  Luca asforhim clothing_store to go. <br>
+  Salesperson: "Hi!" What (object) help do (question) <br>
+  Luca: Cold be. <br>
+  Salesperson: "I recommend longjohns." <br>
+  Luca: "You recommend longjohns?" <br>
+  Salesperson: "Yes. Like underwear, but long. They look like leggings." <br>
+  Luca: "Men's leggings." <br>
+  Salesperson: "And your jacket is thin. Buy a winter coat." <br>
+  Luca: "Where are the winter coats?" <br>
+  Salesperson: "Straight ahead and to the left." <br>
+  Luca: "Thanks." <br>
+  Luca asforhim black winter coat find. <br>
+  Salesperson: "Is that all?" <br>
+  Luca: "That's all." <br>
+  Salesperson: "Buy a beanie too." <br>
+  Luca: "Okay, a beanie too." <br>
+  Salesperson: "Black or white?" <br>
+  Luca: "White." <br>
+  Salesperson: "238 euros, please." <br>
+  Luca asforhim card pay. <br>
+  Luca: "Thanks! Bye bye." <br>
+  Salesperson: "Thanks! Bye bye." <br>
+  `;
+
   const story3English = `
   Luca is cold. <br>
   Luca goes to a clothing store. <br>
@@ -625,6 +661,7 @@ Koko wa Finrando da.`;
         storyData: {
           storyTitle: "Vaatekauppa",
           finnishLines: splitByBr(story3Finnish),
+          fakeEnglishLines: splitByBr(story3FakeEnglish),
           englishLines: splitByBr(story3English),
           spokenLines: splitByBr(story3SpokenFinnish),
           
