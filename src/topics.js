@@ -261,8 +261,8 @@ const splitByBr = (storyText) => {
   Luca asforhim clothing_store to go. <br>
   Salesperson: "Hi!" What (object) help do (question) <br>
   Luca: Cold be. <br>
-  Salesperson: "I recommend longjohns." <br>
-  Luca: "You recommend longjohns?" <br>
+  Salesperson: "Longjohns (object) recommendation do." <br>
+  Luca: "Longjohns (object) recommendation do (question)?" <br>
   Salesperson: "Yes. Like underwear, but long. They look like leggings." <br>
   Luca: "Men's leggings." <br>
   Salesperson: "And your jacket is thin. Buy a winter coat." <br>
