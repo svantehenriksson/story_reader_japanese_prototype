@@ -100,7 +100,7 @@ const splitByBr = (storyText) => {
   Snow (it_subject) lots. <br>
   Cold. <br>
   Really cold. <br>
-  Snow (it_subject) beautiful be. <br>
+  Snow asforit beautiful be. <br>
   Luca asforhim smile. <br>
   This asforit Finland be.
 `;
@@ -263,21 +263,21 @@ const splitByBr = (storyText) => {
   Luca: Cold be. <br>
   Salesperson: "Longjohns (object) recommendation do." <br>
   Luca: "Longjohns (object) recommendation do (question)?" <br>
-  Salesperson: "Yes. Like underwear, but long. They look like leggings." <br>
-  Luca: "Men's leggings." <br>
-  Salesperson: "And your jacket is thin. Buy a winter coat." <br>
-  Luca: "Where are the winter coats?" <br>
-  Salesperson: "Straight ahead and to the left." <br>
+  Salesperson: "Yes. Underwear like be but, long be. Leggings like if appear." <br>
+  Luca: "Male forthem leggings." <br>
+  Salesperson: "Also and you r jacket asforit thin be. Winter coat (object) buy please." <br>
+  Luca: "Winter coats asforthem where in exist (question)?" <br>
+  Salesperson: "Straight ahead, left be." <br>
   Luca: "Thanks." <br>
-  Luca asforhim black winter coat find. <br>
-  Salesperson: "Is that all?" <br>
-  Luca: "That's all." <br>
-  Salesperson: "Buy a beanie too." <br>
-  Luca: "Okay, a beanie too." <br>
+  Luca asforhim black winter coat (object) find. <br>
+  Salesperson: "That with all be (question)?" <br>
+  Luca: "That with all be." <br>
+  Salesperson: "Hat/beanie also buy please." <br>
+  Luca: "Understood, beanie too." <br>
   Salesperson: "Black or white?" <br>
   Luca: "White." <br>
   Salesperson: "238 euros, please." <br>
-  Luca asforhim card pay. <br>
+  Luca asforhim card (instrument) pay. <br>
   Luca: "Thanks! Bye bye." <br>
   Salesperson: "Thanks! Bye bye." <br>
   `;
@@ -353,6 +353,27 @@ const splitByBr = (storyText) => {
   Jarkko: Jinkou chinou no purojekuto. Ruoholahti no okyakusama no tame. <br>
   Ruka: Douyatte Ruoholahti ni ikeba ii? <br>
   Jarkko: Toramu de itte. Soretomo kaisha no denki jitensha. Fuyu taiya ga tsuite iru. <br>
+`;
+
+const story4FakeEnglish = `
+  Boss: Welcome! <br>
+  Luca: Thanks. <br>
+  The boss and Luca shake hands. <br>
+  Boss: I'm Jarkko. <br>
+  Luca: I'm Luca. <br>
+  Jarkko: Do you want coffee? <br>
+  Luca: Yes, please. <br>
+  Jarkko: I will have coffee too. Monday morning. <br>
+  The men take coffee from the machine. <br>
+  The machine makes a loud sound: brrrr. <br>
+  Luca: There are very few people here. <br>
+  Jarkko: Hybrid work. <br>
+  Luca: Aha. <br>
+  Jarkko: I have your first task. <br>
+  Luca: What task? <br>
+  Jarkko: An artificial intelligence project. For a client in Ruoholahti. <br>
+  Luca: How do I get to Ruoholahti? <br>
+  Jarkko: Take the tram. Or the company's electric bike. It has winter tires. <br>
 `;
 
 const story4English = `
@@ -788,6 +809,7 @@ Koko wa Finrando da.`;
         storyData: {
           storyTitle: "Ensimmäinen työpäivä",
           finnishLines: splitByBr(story4Finnish),
+          fakeEnglishLines: splitByBr(story4FakeEnglish),
           englishLines: splitByBr(story4English),
           spokenLines: splitByBr(story4SpokenFinnish),
 
