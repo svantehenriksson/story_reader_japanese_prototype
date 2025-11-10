@@ -358,13 +358,13 @@ const splitByBr = (storyText) => {
 const story4FakeEnglish = `
   Boss: Welcome! <br>
   Luca: Thanks. <br>
-  The boss and Luca shake hands. <br>
-  Boss: I'm Jarkko. <br>
-  Luca: I'm Luca. <br>
-  Jarkko: Do you want coffee? <br>
-  Luca: Yes, please. <br>
-  Jarkko: I will have coffee too. Monday morning. <br>
-  The men take coffee from the machine. <br>
+  Boss and Luca asforthem shake hands. <br>
+  Boss: I asforme Jarkko be. <br>
+  Luca: I asforme Luca be. <br>
+  Jarkko: Coffee asforit IKAGA be (question)? <br>
+  Luca: Yes, please be. <br>
+  Jarkko: I too coffee NI SHIMASU. Monday 's morning. <br>
+  Manmany asforthem *** take coffee from the machine. <br>
   The machine makes a loud sound: brrrr. <br>
   Luca: There are very few people here. <br>
   Jarkko: Hybrid work. <br>
