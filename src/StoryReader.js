@@ -6,9 +6,6 @@ import './style.css';
 const StoryReader = ({ goToQuiz, goToNextChapter, topic, topics, handleTopicSelect, topicIndex: currentTopicIndex, resumeAtLastLine, onResumeHandled }) => {
   const { storyTitle, finnishLines, fakeEnglishLines, englishLines, spokenLines, FinnishTranslationIndex, EnglishTranslationIndex, FinnishEndingsIndex, grammarNotes } = topic.storyData;
 
-  console.log('goToQuiz', goToQuiz, 'goToNextChapter', goToNextChapter, 'topic: ', topic, 'topics: ', topics, 'handleTopicSelect: ', handleTopicSelect, 'CURRENTtopicIndex: ', currentTopicIndex, 'resumeAtLastLine: ', resumeAtLastLine, 'onResumeHandled: ', onResumeHandled);
-  console.log('storyTitle: ', storyTitle, 'finnishLines: ', finnishLines, 'fakeEnglishLines: ', fakeEnglishLines, 'englishLines: ', englishLines, 'spokenLines: ', spokenLines, 'FinnishTranslationIndex: ', FinnishTranslationIndex, 'EnglishTranslationIndex: ', EnglishTranslationIndex, 'FinnishEndingsIndex: ', FinnishEndingsIndex, 'grammarNotes: ', grammarNotes);
-
   const [lineIndex, setLineIndex] = useState(0);
   const [hoveredWordIndex, setHoveredWordIndex] = useState(null);
   const [showGrammar, setShowGrammar] = useState(false);
@@ -190,7 +187,9 @@ const renderWords = (words, className, isFinnish = false) =>
       setLineIndex(i);
       setHoveredWordIndex(null);
 
-      const audio = new Audio(process.env.PUBLIC_URL + '/line' + i + '.mp3');
+      const audio = new Audio(process.env.PUBLIC_URL + '/../public/chapter ' + lineIndex  + 'line' + i + '.mp3');
+      console.log(process.env.PUBLIC_URL + '/../public/chapter' + lineIndex  + 'line' + i + '.mp3');
+      console.log('Public URL: ' + process.env.PUBLIC_URL);
       audio.playbackRate = 0.5
 
       audio.play().catch(err => {
@@ -244,6 +243,7 @@ const renderWords = (words, className, isFinnish = false) =>
      { /*<h1 className="story-title">{storyTitle}</h1>*/},
 
      <div className="outer-box">
+
 
      <div className="story-illustration-container">
         <img className="story-illustration"
@@ -357,5 +357,8 @@ const renderWords = (words, className, isFinnish = false) =>
     </div>
   );
 };
+
+
+
 
 export default StoryReader;
