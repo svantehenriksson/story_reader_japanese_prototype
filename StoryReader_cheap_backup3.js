@@ -55,11 +55,7 @@ const handleClickBack = () => {
 const renderWords = (words, className, isFinnish = false) =>
   words.map((word, idx) => {
     let isHighlighted = false;
-    if (isFinnish && hoveredWordIndex === idx) {
-      isHighlighted = true;
-    }
 
-    /*
       if (isFinnish && hoveredWordIndex != null) {
         const finGroups = FinnishTranslationIndex[lineIndex];
 
@@ -74,7 +70,7 @@ const renderWords = (words, className, isFinnish = false) =>
           isHighlighted = groupArray.includes(idx);
         }
       }
-      */
+      
       return (
         <>
           <span
@@ -129,7 +125,6 @@ const renderWords = (words, className, isFinnish = false) =>
     (words || []).map((word, idx) => {
       let isHighlighted = false;
 
-      /*
       if (hoveredWordIndex != null) {
         const finGroups = FinnishTranslationIndex[lineIndex];
         const engGroups = EnglishTranslationIndex[lineIndex];
@@ -144,7 +139,7 @@ const renderWords = (words, className, isFinnish = false) =>
           isHighlighted = targetIndices.includes(idx);
         }
       }
-*/      
+      
       return (
         <>
           <span
@@ -153,7 +148,6 @@ const renderWords = (words, className, isFinnish = false) =>
           >
             {word}
           </span>
-
 
           {/* Add space after word if it's not the last word */}
           {idx !== englishLines[lineIndex].length - 1 && (
@@ -269,14 +263,13 @@ const renderWords = (words, className, isFinnish = false) =>
           {renderWordsFe(fakeEnglishLines[lineIndex])}
         </div>
 
-        <div className="story-line spoken">
-          {renderWordsSp(spokenLines[lineIndex])}
-        </div>
-        
         <div className="story-line english">
           {renderWordsEn(englishLines[lineIndex])}
         </div>
 
+        <div className="story-line spoken">
+          {renderWordsSp(spokenLines[lineIndex])}
+        </div>
       </div>
 
       <div className="navigation-buttons">

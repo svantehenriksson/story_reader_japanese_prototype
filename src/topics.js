@@ -128,9 +128,9 @@ const splitByBr = (storyText) => {
   This is Finland.`;
   
   const story1SpokenFinnish = `
-  るかはくうこうにいる。 <br> 
-  るかはつかれている。 <br> 
-  るかはこおひいをのむ。 <br> 
+  るか-は-くうこう-に-いる。 <br> 
+  るか-は-つかれて-いる。 <br> 
+  るか-は-こおひい-を-のむ。 <br> 
   こおひいはたかい。 <br> 
   こおひいはちょっとへんだ。 <br> 
   でもこおひいはやくにたつ。 <br> 
