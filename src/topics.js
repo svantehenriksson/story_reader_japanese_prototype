@@ -364,7 +364,7 @@ const story4FakeEnglish = `
   Jarkko: Coffee asforit IKAGA be (question)? <br>
   Luca: Yes, please be. <br>
   Jarkko: I too coffee NI SHIMASU. Monday 's morning. <br>
-  Manmany asforthem *** take coffee from the machine. <br>
+  Man-many asforthem *** take coffee from the machine. <br>
   The machine makes a loud sound: brrrr. <br>
   Luca: There are very few people here. <br>
   Jarkko: Hybrid work. <br>

@@ -187,8 +187,9 @@ const renderWords = (words, className, isFinnish = false) =>
       setLineIndex(i);
       setHoveredWordIndex(null);
 
-      const audio = new Audio(process.env.PUBLIC_URL + '/../public/chapter ' + lineIndex  + 'line' + i + '.mp3');
-      console.log(process.env.PUBLIC_URL + '/../public/chapter' + lineIndex  + 'line' + i + '.mp3');
+      //const audio = new Audio(process.env.PUBLIC_URL + '/../public/chapter ' + lineIndex  + 'line' + i + '.mp3');
+      const audio = new Audio(`${process.env.PUBLIC_URL}/chapter${currentTopicIndex}line${i}.mp3`);
+      console.log('${process.env.PUBLIC_URL}/chapter${currentTopicIndex}line${i}.mp3');
       console.log('Public URL: ' + process.env.PUBLIC_URL);
       audio.playbackRate = 0.5
 
