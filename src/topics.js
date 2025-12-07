@@ -32,6 +32,8 @@ const splitByBr = (storyText) => {
   function extractFinnishEndingsIndex(storyText) {
     const lines = storyText.trim().split('<br>').map(line => line.trim());
     const endingsIndex = [];
+
+    console.log("DEBUG: Calling the function extractFinnishEndingsIndex");
   
     for (const line of lines) {
       const words = line.split(/\s+/);
@@ -62,7 +64,7 @@ const splitByBr = (storyText) => {
 
   const story1Finnish = `
   Ruka wa kuukou ni iru. <br> 
-  Ruka wa tsukarete iru. <br> 
+  Ruka wa tsukare-te iru. <br> 
   Ruka wa koohii o nomu. <br> 
   Koohii wa takai. <br> 
   Koohii wa chotto hen da. <br> 
@@ -150,7 +152,7 @@ const splitByBr = (storyText) => {
   ここはふぃんらんどだ。`;
   
   const story2Finnish = `
-  Ruka wa erebeetaa ni hairu. <br> 
+  Ruka wa erebe-etaa ni hai-ru. <br> 
   Erebeetaa ni onna no hito ga iru. <br> 
   Onna no hito wa shizuka ni tatte iru. <br> 
   Ruka mo shizuka ni tatte iru. <br> 
@@ -507,11 +509,12 @@ Koko wa Finrando da.`;
         finnishLines: splitByBr(story1Finnish),
         englishLines: splitByBr(story1English),
         fakeEnglishLines: splitByBr(story1FakeEnglish),
+        FinnishEndingsIndex: extractFinnishEndingsIndex(story1Finnish),
         spokenLines: splitByBr(story1SpokenFinnish),
         //FinnishEndingsIndex: [
         //  [3], [], [3], [3], [4], [], [1, 3], [2, 4], [2], [4], [], [], [], [3], [2], [], [], [3], [2], []
         //],
-        FinnishEndingsIndex: [],
+        //FinnishEndingsIndex: [],
         FinnishTranslationIndex: [
           [0, 1, 2, 3], // Ruka wa kuukou ni iru.
           [0, 1, 2], // Ruka wa tsukarete iru.

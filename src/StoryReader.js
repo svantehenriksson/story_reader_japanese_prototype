@@ -14,6 +14,9 @@ const StoryReader = ({ goToQuiz, goToNextChapter, topic, topics, handleTopicSele
 
   const isPlayingRef = useRef(false);
 
+  console.log("In beginning of code, FinnishEndingsIndex: ",FinnishEndingsIndex);
+
+
   // If asked to resume at last line (from quiz), jump once and clear flag
   useEffect(() => {
     if (resumeAtLastLine) {
@@ -58,6 +61,7 @@ const renderWords = (words, className, isFinnish = false) =>
     if (isFinnish && hoveredWordIndex === idx) {
       isHighlighted = true;
     }
+    console.log("FinnishEndingsIndex[lineIndex]: " + FinnishEndingsIndex[lineIndex]);
 
     /*
       if (isFinnish && hoveredWordIndex != null) {
@@ -272,7 +276,7 @@ const renderWords = (words, className, isFinnish = false) =>
         <div className="story-line spoken">
           {renderWordsSp(spokenLines[lineIndex])}
         </div>
-        
+
         <div className="story-line english">
           {renderWordsEn(englishLines[lineIndex])}
         </div>
